@@ -237,181 +237,172 @@ nav a.active::after {
 }
 
 /* ---------- SPLIT RAIL HERO ---------- */
-.hero {
-  position: relative;
+/* ---------- MAGAZINE MASTHEAD HERO ---------- */
+.hero-magazine {
+  background: #F3F0E6;
   min-height: 100vh;
+  position: relative;
   display: flex;
+  flex-direction: column;
+  color: #1a1a1a;
   overflow: hidden;
-  background: #0e1712;
-}
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url('https://www.ivainfra.in/images/banner/slider/home_page_banner.jpg') center/cover;
-  opacity: 0.4;
-  z-index: 1;
-}
-.hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(14, 23, 18, 1) 0%, rgba(14, 23, 18, 0.7) 40%, rgba(14, 23, 18, 0.3) 100%);
-  z-index: 1;
-}
-.hero > * {
-  z-index: 2; /* Ensures content is above the background pseudo-elements */
 }
 
-/* Vertical rail nav */
-.rail {
-  width: 88px;
-  background: #0a120d;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 32px 0;
-  border-right: 1px solid rgba(201, 162, 39, 0.25);
-  z-index: 10;
+/* Masthead (Logo) */
+.hero-magazine .masthead {
+  text-align: center;
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.rail .logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.3s ease;
-}
-.rail .logo:hover {
-  opacity: 0.8;
-}
-.rail .logo img {
-  width: 55px; /* Fit perfectly within the 88px rail */
-  height: auto;
-}
-.rail nav {
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
-}
-.rail nav a {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  color: #c8c3b4;
+.hero-magazine .masthead a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  letter-spacing: 6px;
+  color: #1a1a1a;
   text-decoration: none;
+  font-weight: 400;
+}
+
+/* Horizontal Navigation */
+.hero-magazine .hero-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 60px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-family: 'Jost', sans-serif;
   font-size: 13px;
   letter-spacing: 2px;
-  text-transform: uppercase;
-  transition: color 0.2s;
 }
-.rail nav a:hover, .rail nav a.active {
+.hero-magazine .nav-links {
+  display: flex;
+  gap: 40px;
+}
+.hero-magazine .nav-links a {
+  color: #1a1a1a;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+.hero-magazine .nav-links a.active, .hero-magazine .nav-links a:hover {
   color: #c9a227;
 }
-.rail .call {
-  writing-mode: vertical-rl;
-  color: #8a8578;
-  font-size: 11px;
-  letter-spacing: 2px;
-}
-
-/* Right visual background */
-.visual {
-  flex: 1;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px;
-}
-
-.content {
-  position: relative;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 40px 0 64px;
-  z-index: 2;
-}
-
-.tag {
-  font-size: 12px;
+.hero-magazine .nav-contact {
+  color: #1a1a1a;
   letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #c9a227;
-  border: 1px solid rgba(201, 162, 39, 0.5);
-  display: inline-block;
-  padding: 8px 16px;
-  margin-bottom: 28px;
-  width: fit-content;
 }
 
-h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 500;
-  font-size: 64px;
-  line-height: 1.08;
-  color: #f2ede1;
-  margin-bottom: 24px;
+/* Content Area */
+.hero-magazine .content {
+  padding: 80px 60px;
+  max-width: 800px;
 }
-h1 em {
+.hero-magazine .tag {
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #c9a227;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  display: inline-block;
+  font-weight: 500;
+}
+.hero-magazine h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 72px;
+  line-height: 1.1;
+  color: #1a1a1a;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.hero-magazine h1 em {
   font-style: italic;
   color: #c9a227;
 }
-p.sub {
+.hero-magazine p.sub {
   font-family: 'Jost', sans-serif;
-  margin-top: 24px;
-  font-size: 16px;
-  line-height: 1.75;
-  color: #b9b4a5;
-  max-width: 440px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #555;
   font-weight: 300;
+  max-width: 550px;
 }
 
-.cta-row {
-  margin-top: 40px;
+/* Buttons */
+.hero-magazine .cta-row {
+  margin-top: 50px;
   display: flex;
-  gap: 16px;
   align-items: center;
+  gap: 30px;
 }
-
-.btn-gold {
-  background: #c9a227;
-  color: #0e1712;
-  padding: 15px 30px;
-  text-decoration: none;
+.hero-magazine .btn-dark {
+  background: #111413;
+  color: #F3F0E6;
+  padding: 16px 32px;
+  font-family: 'Jost', sans-serif;
   font-size: 13px;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   text-transform: uppercase;
+  text-decoration: none;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease;
 }
-.btn-gold:hover {
-  background: #e0ba45;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(201, 162, 39, 0.3);
+.hero-magazine .btn-dark:hover {
+  background: #333;
 }
-
-.btn-line {
-  color: #f2ede1;
-  text-decoration: none;
+.hero-magazine .btn-underline {
+  color: #1a1a1a;
+  font-family: 'Jost', sans-serif;
   font-size: 13px;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  padding: 15px 6px;
-  border-bottom: 1px solid #f2ede1;
-  transition: opacity 0.3s ease;
+  text-decoration: none;
+  border-bottom: 1px solid #1a1a1a;
+  padding-bottom: 4px;
+  transition: opacity 0.3s;
 }
-.btn-line:hover {
-  opacity: 0.7;
+.hero-magazine .btn-underline:hover {
+  opacity: 0.6;
 }
 
+/* Floating Tag */
+.hero-magazine .floating-tag {
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+  background: #46534d;
+  color: #F3F0E6;
+  padding: 14px 24px;
+  font-family: 'Jost', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+}
+
+/* Responsive */
 @media (max-width: 900px) {
-  .hero { flex-direction: column; }
-  .rail nav a, .rail .call { display: none; }
-  .rail { width: 100%; flex-direction: row; padding: 20px; border-right: none; border-bottom: 1px solid rgba(201, 162, 39, 0.25); }
-  .content { width: 100%; padding: 40px 20px; }
-  .visual { width: 100%; padding: 20px; }
-  h1 { font-size: 40px; }
+  .hero-magazine .hero-nav {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  .hero-magazine .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .hero-magazine .content {
+    padding: 40px 20px;
+  }
+  .hero-magazine h1 {
+    font-size: 48px;
+  }
+  .hero-magazine .floating-tag {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    display: inline-block;
+  }
 }
 
 /* ---------- FLOATING STAT CARDS (TUBIK STYLE) ---------- */
