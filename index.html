@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="assets/css/LightRays.css">
 <link rel="stylesheet" href="assets/css/StarBorder.css">
 <link rel="stylesheet" href="assets/css/ModelViewer.css">
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 </head>
 <body>
 
@@ -41,8 +42,15 @@
   </div>
 
   <div class="visual">
-    <div class="model-viewer-box" data-model-viewer data-auto-rotate="true" data-show-screenshot-button="false" style="width: 100%; max-width: 600px; height: 500px; z-index: 5; position: relative; background: transparent;">
-    </div>
+    <model-viewer 
+      src="assets/models/lantern.glb" 
+      camera-controls 
+      auto-rotate 
+      environment-image="neutral" 
+      exposure="1.2" 
+      shadow-intensity="1.5" 
+      style="width: 100%; max-width: 600px; height: 500px; z-index: 5; position: relative; background: transparent;">
+    </model-viewer>
   </div>
 </div>
 
