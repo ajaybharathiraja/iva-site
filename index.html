@@ -42,15 +42,9 @@
   </div>
 
   <div class="visual">
-    <model-viewer 
-      src="assets/models/lantern.glb" 
-      camera-controls 
-      auto-rotate 
-      environment-image="neutral" 
-      exposure="1.2" 
-      shadow-intensity="1.5" 
-      style="width: 100%; max-width: 600px; height: 500px; z-index: 5; position: relative; background: transparent;">
-    </model-viewer>
+    <div class="tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.5" style="width: 100%; max-width: 600px; border-radius: 12px; transform-style: preserve-3d; background: transparent; position: relative;">
+      <img src="assets/images/villa-16.jpg" alt="Villa 16" style="width: 100%; border-radius: 12px; box-shadow: 0 25px 50px rgba(0,0,0,0.5); transform: translateZ(50px);">
+    </div>
   </div>
 </div>
 
@@ -347,6 +341,7 @@
 <script src="assets/js/split-text.js"></script>
 <script src="assets/js/star-border.js"></script>
 <script src="assets/js/model-viewer.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
