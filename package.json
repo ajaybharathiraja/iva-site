@@ -1,0 +1,16 @@
+{
+  "name": "iva-infrastructure-site",
+  "version": "1.0.0",
+  "description": "IVA Infrastructure — Luxury Villas Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8080 --directory iva-site"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.100.0",
+    "@react-three/fiber": "^8.16.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.165.0"
+  }
+}

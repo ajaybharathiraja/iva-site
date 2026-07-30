@@ -1,0 +1,43 @@
+/* ModelViewer — React Bits Component Styles */
+
+.model-viewer-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  touch-action: pan-y pinch-zoom;
+}
+
+.model-viewer-screenshot-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(212, 179, 125, 0.4);
+  background: rgba(20, 24, 28, 0.85);
+  color: #D4B37D;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+}
+
+.model-viewer-screenshot-btn:hover {
+  background: #D4B37D;
+  color: #14181C;
+  border-color: #D4B37D;
+  box-shadow: 0 4px 15px rgba(212, 179, 125, 0.3);
+}
+
+.model-viewer-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #D4B37D;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.9rem;
+}

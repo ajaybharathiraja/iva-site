@@ -1,0 +1,108 @@
+/* =========================================================
+   IVA INFRASTRUCTURE — ScrollStack CSS (React Bits Variant)
+   ========================================================= */
+.scroll-stack-section {
+  position: relative;
+  padding: 4rem 5vw 10rem;
+}
+
+.scroll-stack-scroller {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.scroll-stack-inner {
+  padding: 4rem 0 16rem;
+  position: relative;
+}
+
+.scroll-stack-card {
+  transform-origin: top center;
+  will-change: transform, filter;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  box-shadow: 0 18px 45px rgba(58, 24, 17, 0.12);
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 3.5rem;
+  border-radius: 24px;
+  border: 1px solid var(--line, rgba(58, 24, 17, 0.15));
+  background: var(--paper, #F9F5EE);
+  box-sizing: border-box;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  position: relative;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.scroll-stack-card.dark-theme {
+  background: var(--ink, #3A1811);
+  color: var(--sand, #EAD8BD);
+  border-color: rgba(234, 216, 189, 0.22);
+}
+
+.scroll-stack-card:hover {
+  border-color: var(--brass, #D4B37D);
+  box-shadow: 0 24px 55px rgba(58, 24, 17, 0.18);
+}
+
+.scroll-stack-card .card-content {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.scroll-stack-card .card-media {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+}
+
+.scroll-stack-card .card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.scroll-stack-card:hover .card-media img {
+  transform: scale(1.05);
+}
+
+.scroll-stack-card .card-info h3 {
+  font-family: var(--serif, 'Fraunces', serif);
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+  font-weight: 500;
+  margin: 0.8rem 0 1.2rem;
+  line-height: 1.15;
+}
+
+.scroll-stack-card .card-info p {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--ink-soft, #664941);
+  margin-bottom: 1.8rem;
+}
+
+.scroll-stack-card.dark-theme .card-info p {
+  color: rgba(234, 216, 189, 0.78);
+}
+
+.scroll-stack-end {
+  width: 100%;
+  height: 1px;
+}
+
+@media (max-width: 860px) {
+  .scroll-stack-card {
+    padding: 2.2rem;
+  }
+  .scroll-stack-card .card-content {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+}
