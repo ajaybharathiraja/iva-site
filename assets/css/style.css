@@ -293,13 +293,20 @@ nav a.active::after {
 .visual {
   flex: 1;
   position: relative;
-  background: #0e1712; /* Using solid color to match screenshot */
+  background: #0e1712;
+}
+.visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('https://www.ivainfra.in/images/banner/slider/home_page_banner.jpg') center/cover;
+  opacity: 0.4; /* Medium opacity */
 }
 .visual::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(10,18,13,0.96) 0%, rgba(10,18,13,0.55) 42%, rgba(10,18,13,0.15) 70%);
+  background: linear-gradient(90deg, rgba(14, 23, 18, 1) 0%, rgba(14, 23, 18, 0.7) 30%, rgba(14, 23, 18, 0.1) 100%);
 }
 
 .content {
