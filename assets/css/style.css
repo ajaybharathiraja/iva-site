@@ -244,6 +244,24 @@ nav a.active::after {
   overflow: hidden;
   background: #0e1712;
 }
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('https://www.ivainfra.in/images/banner/slider/home_page_banner.jpg') center/cover;
+  opacity: 0.4;
+  z-index: 1;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(14, 23, 18, 1) 0%, rgba(14, 23, 18, 0.7) 40%, rgba(14, 23, 18, 0.3) 100%);
+  z-index: 1;
+}
+.hero > * {
+  z-index: 2; /* Ensures content is above the background pseudo-elements */
+}
 
 /* Vertical rail nav */
 .rail {
@@ -299,24 +317,10 @@ nav a.active::after {
 .visual {
   flex: 1;
   position: relative;
-  background: #0e1712;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 40px;
-}
-.visual::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url('https://www.ivainfra.in/images/banner/slider/home_page_banner.jpg') center/cover;
-  opacity: 0.4; /* Medium opacity */
-}
-.visual::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(14, 23, 18, 1) 0%, rgba(14, 23, 18, 0.7) 30%, rgba(14, 23, 18, 0.1) 100%);
 }
 
 .content {
