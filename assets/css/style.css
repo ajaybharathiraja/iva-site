@@ -248,6 +248,22 @@ nav a.active::after {
   overflow: hidden;
 }
 
+/* Background Image Overlay */
+.hero-magazine::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../images/hero-bg.jpg') center/cover no-repeat;
+  opacity: 0.35; /* Medium Opacity */
+  z-index: 0;
+  mix-blend-mode: multiply; /* Helps it blend nicely with the beige */
+}
+
+.hero-magazine > * {
+  z-index: 1; /* Keep content above the background */
+  position: relative;
+}
+
 
 
 /* Horizontal Navigation */
@@ -255,7 +271,7 @@ nav a.active::after {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 60px;
+  padding: 16px 60px; /* Reduced from 24px */
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   font-family: 'Jost', sans-serif;
   font-size: 13px;
@@ -293,7 +309,7 @@ nav a.active::after {
 
 /* Content Area */
 .hero-magazine .content {
-  padding: 80px 60px;
+  padding: 40px 60px; /* Reduced top padding from 80px */
   max-width: 800px;
 }
 .hero-magazine .tag {
