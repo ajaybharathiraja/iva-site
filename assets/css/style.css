@@ -248,22 +248,7 @@ nav a.active::after {
   overflow: hidden;
 }
 
-/* Masthead (Logo) */
-.hero-magazine .masthead {
-  text-align: center;
-  padding: 40px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-.hero-magazine .masthead a {
-  display: inline-block;
-  text-decoration: none;
-}
-.hero-magazine .masthead-logo {
-  height: 60px;
-  width: auto;
-  object-fit: contain;
-  mix-blend-mode: multiply; /* Removes white background from logo and blends with the beige */
-}
+
 
 /* Horizontal Navigation */
 .hero-magazine .hero-nav {
@@ -278,7 +263,19 @@ nav a.active::after {
 }
 .hero-magazine .nav-links {
   display: flex;
+  align-items: center;
   gap: 40px;
+}
+.hero-magazine .logo-link {
+  display: flex;
+  align-items: center;
+  margin-right: 10px; /* Slight extra gap before 'HOME' */
+}
+.hero-magazine .nav-logo {
+  height: 30px;
+  width: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
 }
 .hero-magazine .nav-links a {
   color: #1a1a1a;
