@@ -6,36 +6,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root {
-  /* ── DARK SURFACES (Mahogany) ───────────────────────── */
-  --bg-dark:       #3A100A;   /* Deep mahogany page background   */
-  --bg-card:       #5A1E14;   /* Cards on dark bg — clearly diff */
-  --bg-card-hover: #6B2720;   /* Card hover — warm reddish       */
-  --bg-mid:        #7A3228;   /* Mid-tone for subtle contrast    */
+  /* ── DARK SURFACES (Forest Green) ───────────────────── */
+  --bg-dark:       #28443E;   /* Deep forest background          */
+  --bg-card:       #31524B;   /* Card surface                    */
+  --bg-card-hover: #3D665D;   /* Card hover — lighter green      */
+  --bg-mid:        #46786D;   /* Mid-tone for subtle contrast    */
 
-  /* ── LIGHT SURFACES (Sand Beige) ──────────────────────*/
-  --bg-light:      #D4AF77;   /* Sand beige — light sections bg  */
-  --paper:         #F0E6C8;   /* Warm cream paper                */
-  --bg-sand-soft:  #EDD99A;   /* Lighter gold sand highlight     */
+  /* ── LIGHT SURFACES (Mustard/Cream) ─────────────────── */
+  --bg-light:      #BF9A49;   /* Mustard sections bg             */
+  --paper:         #F2EFE9;   /* Warm off-white paper            */
+  --bg-sand-soft:  #C7AA64;   /* Softer gold highlight           */
 
   /* ── PRIMARY ACCENT (Gold) ────────────────────────────*/
-  --brass:         #C9A84C;   /* Rich warm gold accent           */
-  --brass-light:   #E2C06A;   /* Lighter gold                    */
-  --brass-dark:    #A07830;   /* Deeper gold for dark-on-light   */
-  --brass-glow:    rgba(201, 168, 76, 0.35);
+  --brass:         #BF9A49;   /* Mustard gold accent             */
+  --brass-light:   #D6B56E;   /* Lighter gold                    */
+  --brass-dark:    #997B3A;   /* Deeper gold for dark-on-light   */
+  --brass-glow:    rgba(191, 154, 73, 0.35);
 
   /* ── TYPOGRAPHY ON DARK BACKGROUNDS ───────────────────*/
-  --text-main:     #F7EED8;   /* Bright warm cream — high contrast on dark */
-  --text-muted:    #E8CBB0;   /* Warm light tan — readable on mahogany     */
-  --text-sub:      #C8A07A;   /* Secondary — still readable                */
+  --text-main:     #F2EFE9;   /* Off-white — high contrast on dark */
+  --text-muted:    #A7C2BB;   /* Muted mint/gray — readable on green */
+  --text-sub:      #82A69D;   /* Secondary — still readable        */
 
   /* ── TYPOGRAPHY ON LIGHT BACKGROUNDS ──────────────────*/
-  --ink:           #2A0C06;   /* Deep mahogany text on sand/cream bg       */
-  --text-dark:     #3A100A;   /* Headline on sand bg                       */
+  --ink:           #1A2D29;   /* Very dark green on mustard/cream bg */
+  --text-dark:     #28443E;   /* Headline on mustard bg              */
 
   /* ── BORDERS ───────────────────────────────────────── */
-  --line:          rgba(201, 168, 76, 0.32);       /* Gold border on dark */
-  --line-light:    rgba(58, 16, 10, 0.2);          /* Mahogany border on sand */
-  --line-dark:     rgba(247, 238, 216, 0.12);      /* Subtle white on dark */
+  --line:          rgba(191, 154, 73, 0.32);       /* Gold border on dark */
+  --line-light:    rgba(40, 68, 62, 0.2);          /* Dark green border on mustard */
+  --line-dark:     rgba(242, 239, 233, 0.12);      /* Subtle white on dark */
 
   --serif:  'Playfair Display', 'Fraunces', serif;
   --sans:   'Plus Jakarta Sans', 'Inter', sans-serif;
@@ -139,7 +139,7 @@ header {
   background: rgba(61, 20, 9, 0.75);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(201, 170, 118, 0.2);
+  border-bottom: 1px solid rgba(191, 154, 73, 0.2);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -245,7 +245,7 @@ nav a.active::after {
   justify-content: center;
   padding: 130px 6vw 70px;
   background: radial-gradient(circle at 65% 25%, rgba(201, 168, 76, 0.2) 0%, transparent 55%),
-              linear-gradient(180deg, #3A100A 0%, #5A1E14 100%);
+              linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-card) 100%);
   overflow: hidden;
 }
 
@@ -442,7 +442,7 @@ section {
 
 /* ---------- MARQUEE TICKER ---------- */
 .marquee-strip {
-  background: #2A0C06;
+  background: var(--ink);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   padding: 1.3rem 0;
@@ -528,7 +528,7 @@ section {
   font-size: 0.68rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  background: rgba(42, 12, 6, 0.85);
+  background: rgba(40, 68, 62, 0.85);
   color: var(--brass);
   border: 1px solid var(--brass);
   padding: 0.35rem 0.8rem;
@@ -694,7 +694,7 @@ section {
 
 /* ---------- FOOTER ---------- */
 footer {
-  background: #2A0C06;
+  background: var(--ink);
   border-top: 1px solid var(--line);
   padding: 5rem 6vw 2.5rem;
   color: var(--text-muted);

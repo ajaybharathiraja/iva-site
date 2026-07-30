@@ -14,7 +14,7 @@ class LightRays {
 
     // Standard attributes matching React Bits LightRays Props
     this.raysOrigin = ds.raysOrigin || options.raysOrigin || 'top-center';
-    this.raysColor = ds.raysColor || options.raysColor || '#C9A84C'; // Theme-aligned Gold
+    this.raysColor = ds.raysColor || options.raysColor || '#BF9A49'; // Theme-aligned Gold
     this.raysSpeed = ds.raysSpeed ? parseFloat(ds.raysSpeed) : (options.raysSpeed !== undefined ? options.raysSpeed : 1.5);
     this.lightSpread = ds.lightSpread ? parseFloat(ds.lightSpread) : (options.lightSpread !== undefined ? options.lightSpread : 0.8);
     this.rayLength = ds.rayLength ? parseFloat(ds.rayLength) : (options.rayLength !== undefined ? options.rayLength : 1.2);
