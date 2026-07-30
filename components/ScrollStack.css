@@ -28,13 +28,13 @@
   will-change: transform, filter;
   backface-visibility: hidden;
   transform-style: preserve-3d;
-  box-shadow: 0 20px 50px rgba(58, 24, 17, 0.12);
+  box-shadow: 0 20px 50px rgba(26, 45, 41, 0.12);
   min-height: 22rem;
   width: 100%;
   margin: 30px 0;
   padding: 3.5rem;
   border-radius: 28px;
-  border: 1px solid var(--line, rgba(58, 24, 17, 0.15));
+  border: 1px solid var(--line, rgba(26, 45, 41, 0.15));
   background: var(--paper, #F9F5EE);
   box-sizing: border-box;
   -webkit-transform: translateZ(0);
@@ -45,7 +45,7 @@
 
 .scroll-stack-card:hover {
   border-color: var(--brass, #D4B37D);
-  box-shadow: 0 24px 60px rgba(58, 24, 17, 0.18);
+  box-shadow: 0 24px 60px rgba(26, 45, 41, 0.18);
 }
 
 .scroll-stack-end {

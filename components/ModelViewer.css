@@ -16,7 +16,7 @@
   cursor: pointer;
   padding: 8px 16px;
   border-radius: 8px;
-  border: 1px solid rgba(212, 179, 125, 0.4);
+  border: 1px solid rgba(191, 154, 73, 0.4);
   background: rgba(20, 24, 28, 0.85);
   color: #D4B37D;
   font-family: inherit;
@@ -30,7 +30,7 @@
   background: #D4B37D;
   color: #14181C;
   border-color: #D4B37D;
-  box-shadow: 0 4px 15px rgba(212, 179, 125, 0.3);
+  box-shadow: 0 4px 15px rgba(191, 154, 73, 0.3);
 }
 
 .model-viewer-loader {

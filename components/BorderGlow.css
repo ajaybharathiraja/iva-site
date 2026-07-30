@@ -20,7 +20,7 @@
 
 .border-glow-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(188, 151, 5, 0.4);
+  border-color: rgba(191, 154, 73, 0.4);
 }
 
 /* Make words gold while touching / hovering */
@@ -33,13 +33,13 @@
 .border-glow-card:hover h3,
 .border-glow-card h3:hover {
   color: var(--brass, #D4B37D) !important;
-  text-shadow: 0 0 12px rgba(212, 179, 125, 0.4);
+  text-shadow: 0 0 12px rgba(191, 154, 73, 0.4);
 }
 
 .border-glow-card:hover .icon {
   border-color: var(--brass, #D4B37D) !important;
   color: var(--brass, #D4B37D) !important;
-  box-shadow: 0 0 16px rgba(212, 179, 125, 0.3);
+  box-shadow: 0 0 16px rgba(191, 154, 73, 0.3);
 }
 
 .border-glow-card:hover p {

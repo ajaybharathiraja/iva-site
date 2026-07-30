@@ -10,7 +10,7 @@ class SpotlightCard {
     if (!card) return;
 
     this.card = card;
-    this.spotlightColor = card.dataset.spotlightColor || options.spotlightColor || 'rgba(188, 151, 5, 0.4)';
+    this.spotlightColor = card.dataset.spotlightColor || options.spotlightColor || 'rgba(191, 154, 73, 0.4)';
 
     this.handleMouseMove = this.handleMouseMove.bind(this);
     this.card.addEventListener('mousemove', this.handleMouseMove);

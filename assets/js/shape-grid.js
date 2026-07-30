@@ -20,7 +20,7 @@ class ShapeGrid {
     this.speed = ds.speed !== undefined ? parseFloat(ds.speed) : (options.speed !== undefined ? options.speed : 0.5);
     this.borderColor = ds.borderColor || options.borderColor || 'rgba(20, 24, 28, 0.12)';
     this.squareSize = ds.squareSize ? parseInt(ds.squareSize, 10) : (options.squareSize || 40);
-    this.hoverFillColor = ds.hoverFillColor || options.hoverFillColor || 'rgba(188, 151, 5, 0.3)';
+    this.hoverFillColor = ds.hoverFillColor || options.hoverFillColor || 'rgba(191, 154, 73, 0.3)';
     this.shape = ds.shape || options.shape || 'square';
     this.hoverTrailAmount = ds.hoverTrailAmount !== undefined ? parseInt(ds.hoverTrailAmount, 10) : (options.hoverTrailAmount !== undefined ? options.hoverTrailAmount : 5);
     this.vignette = ds.vignette !== undefined ? ds.vignette === 'true' : (options.vignette !== undefined ? options.vignette : true);
