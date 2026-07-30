@@ -249,6 +249,19 @@ nav a.active::after {
   overflow: hidden;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('https://www.ivainfra.in/images/banner/slider/home_page_banner.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  mix-blend-mode: overlay;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .blueprint-grid {
   position: absolute;
   inset: 0;
