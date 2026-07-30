@@ -11,7 +11,7 @@ class Aurora {
     if (!container) return;
 
     this.container = container;
-    this.colorStops = options.colorStops || ['#58271E', '#D4B37D', '#EAD8BD'];
+    this.colorStops = options.colorStops || ['#3D1409', '#C9AA76', '#F4EAD5'];
     this.amplitude = options.amplitude !== undefined ? options.amplitude : 1.0;
     this.blend = options.blend !== undefined ? options.blend : 0.5;
     this.speed = options.speed !== undefined ? options.speed : 0.5;

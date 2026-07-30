@@ -14,14 +14,14 @@ class BorderGlow {
     const ds = card.dataset || {};
 
     this.edgeSensitivity = ds.edgeSensitivity ? parseFloat(ds.edgeSensitivity) : (options.edgeSensitivity || 30);
-    this.glowColor = ds.glowColor || options.glowColor || '45 85 55';
-    this.backgroundColor = ds.backgroundColor || options.backgroundColor || '#FAF8F3';
+    this.glowColor = ds.glowColor || options.glowColor || '25 75 45';
+    this.backgroundColor = ds.backgroundColor || options.backgroundColor || '#4E1C10';
     this.borderRadius = ds.borderRadius ? parseInt(ds.borderRadius, 10) : (options.borderRadius || 16);
     this.glowRadius = ds.glowRadius ? parseInt(ds.glowRadius, 10) : (options.glowRadius || 30);
     this.glowIntensity = ds.glowIntensity ? parseFloat(ds.glowIntensity) : (options.glowIntensity || 1.0);
     this.coneSpread = ds.coneSpread ? parseFloat(ds.coneSpread) : (options.coneSpread || 25);
     this.fillOpacity = ds.fillOpacity ? parseFloat(ds.fillOpacity) : (options.fillOpacity || 0.4);
-    this.colors = options.colors || ['#BC9705', '#D9B93C', '#2c1f05ff'];
+    this.colors = options.colors || ['#C9AA76', '#DFC494', '#3D1409'];
 
     this.init();
   }

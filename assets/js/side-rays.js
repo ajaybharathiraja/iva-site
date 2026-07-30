@@ -14,8 +14,8 @@ class SideRays {
     const ds = container.dataset || {};
 
     this.speed = ds.speed ? parseFloat(ds.speed) : (options.speed !== undefined ? options.speed : 2.5);
-    this.rayColor1 = ds.rayColor1 || options.rayColor1 || '#58271E';
-    this.rayColor2 = ds.rayColor2 || options.rayColor2 || '#D4B37D';
+    this.rayColor1 = ds.rayColor1 || options.rayColor1 || '#3D1409';
+    this.rayColor2 = ds.rayColor2 || options.rayColor2 || '#C9AA76';
     this.intensity = ds.intensity ? parseFloat(ds.intensity) : (options.intensity !== undefined ? options.intensity : 2.0);
     this.spread = ds.spread ? parseFloat(ds.spread) : (options.spread !== undefined ? options.spread : 2.0);
     this.origin = ds.origin || options.origin || 'top-right';

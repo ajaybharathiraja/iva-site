@@ -37,7 +37,7 @@ class ModelViewer {
     if (this.showScreenshotButton) {
       this.btn = document.createElement('button');
       this.btn.className = 'model-viewer-screenshot-btn';
-      this.btn.innerHTML = '📷 Take Screenshot';
+      this.btn.innerHTML = 'Capture Snapshot';
       this.btn.addEventListener('click', () => this.captureScreenshot());
       this.container.appendChild(this.btn);
     }
@@ -65,11 +65,11 @@ class ModelViewer {
     keyLight.shadow.mapSize.height = 1024;
     this.scene.add(keyLight);
 
-    const fillLight = new THREE.DirectionalLight(0xBC9705, 0.6);
+    const fillLight = new THREE.DirectionalLight(0xC9AA76, 0.7);
     fillLight.position.set(-5, 5, -5);
     this.scene.add(fillLight);
 
-    const rimLight = new THREE.DirectionalLight(0xD4B37D, 0.8);
+    const rimLight = new THREE.DirectionalLight(0xDFC494, 0.9);
     rimLight.position.set(0, -5, 5);
     this.scene.add(rimLight);
 
@@ -107,9 +107,9 @@ class ModelViewer {
     // Base Floating Podium / Blueprint Grid Platform
     const platformGeo = new THREE.BoxGeometry(7, 0.4, 7);
     const platformMat = new THREE.MeshStandardMaterial({
-      color: 0x1A2026,
+      color: 0x3D1409,
       roughness: 0.2,
-      metalness: 0.8
+      metalness: 0.7
     });
     const platform = new THREE.Mesh(platformGeo, platformMat);
     platform.position.y = -1.2;
@@ -118,7 +118,7 @@ class ModelViewer {
 
     // Golden / Brass Edges for Platform
     const edges = new THREE.EdgesGeometry(platformGeo);
-    const lineMat = new THREE.LineBasicMaterial({ color: 0xBC9705, linewidth: 2 });
+    const lineMat = new THREE.LineBasicMaterial({ color: 0xC9AA76, linewidth: 2 });
     const wireframe = new THREE.LineSegments(edges, lineMat);
     wireframe.position.y = -1.2;
     buildingGroup.add(wireframe);
@@ -139,11 +139,11 @@ class ModelViewer {
     // Glass Floor-to-Ceiling Windows
     const windowGeo = new THREE.PlaneGeometry(3.6, 1.3);
     const glassMat = new THREE.MeshPhysicalMaterial({
-      color: 0x1A3644,
+      color: 0x4E1C10,
       transparent: true,
-      opacity: 0.7,
+      opacity: 0.65,
       roughness: 0.1,
-      metalness: 0.9,
+      metalness: 0.85,
       clearcoat: 1.0
     });
     const frontWindow = new THREE.Mesh(windowGeo, glassMat);
@@ -153,9 +153,9 @@ class ModelViewer {
     // First Floor (Cantilevered Modern Villa Layer)
     const ffGeo = new THREE.BoxGeometry(5.4, 1.6, 4.6);
     const ffMat = new THREE.MeshStandardMaterial({
-      color: 0x232931,
+      color: 0x5C2318,
       roughness: 0.3,
-      metalness: 0.3
+      metalness: 0.2
     });
     const ff = new THREE.Mesh(ffGeo, ffMat);
     ff.position.set(0.3, 1.6, 0.2);
@@ -166,9 +166,9 @@ class ModelViewer {
     // Brass Accent Columns & Beams
     const columnGeo = new THREE.CylinderGeometry(0.08, 0.08, 3.2, 16);
     const brassMat = new THREE.MeshStandardMaterial({
-      color: 0xBC9705,
+      color: 0xC9AA76,
       metalness: 0.9,
-      roughness: 0.2
+      roughness: 0.15
     });
 
     const col1 = new THREE.Mesh(columnGeo, brassMat);
@@ -189,7 +189,7 @@ class ModelViewer {
 
     // Roof Canopy & Skylight Feature
     const roofGeo = new THREE.BoxGeometry(6.0, 0.2, 5.2);
-    const roofMat = new THREE.MeshStandardMaterial({ color: 0x14181C, roughness: 0.5 });
+    const roofMat = new THREE.MeshStandardMaterial({ color: 0x2A0D06, roughness: 0.5 });
     const roof = new THREE.Mesh(roofGeo, roofMat);
     roof.position.set(0.3, 2.5, 0.2);
     roof.castShadow = true;
@@ -202,7 +202,7 @@ class ModelViewer {
 
     // Architectural Blueprint Lines / Light Rings surrounding building
     const ringGeo = new THREE.RingGeometry(4.2, 4.3, 64);
-    const ringMat = new THREE.MeshBasicMaterial({ color: 0xBC9705, side: THREE.DoubleSide, transparent: true, opacity: 0.4 });
+    const ringMat = new THREE.MeshBasicMaterial({ color: 0xC9AA76, side: THREE.DoubleSide, transparent: true, opacity: 0.45 });
     const ring = new THREE.Mesh(ringGeo, ringMat);
     ring.rotation.x = Math.PI / 2;
     ring.position.y = -1.18;

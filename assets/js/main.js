@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
       const original = btn.textContent;
-      btn.textContent = 'Message sent ✓';
+      btn.textContent = 'Message Sent';
       btn.disabled = true;
       form.reset();
       setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 3000);
