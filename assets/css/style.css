@@ -239,12 +239,12 @@ nav a.active::after {
 /* ---------- SPLIT RAIL HERO ---------- */
 /* ---------- MAGAZINE MASTHEAD HERO ---------- */
 .hero-magazine {
-  background: #c09b52; /* Gold theme background matching swatch */
+  background: #33473F; /* Deep Hunter Green */
   min-height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
-  color: #1a1a1a; /* Dark text color */
+  color: #F3EEE2; /* Warm Ivory */
   overflow: hidden;
 }
 
@@ -256,7 +256,7 @@ nav a.active::after {
   background: url('../images/hero-bg.jpg') center/cover no-repeat;
   opacity: 0.35; /* Medium Opacity */
   z-index: 0;
-  mix-blend-mode: multiply; /* Better blending for gold */
+  mix-blend-mode: overlay; /* Best for dark green background */
 }
 
 .hero-magazine > * {
@@ -272,8 +272,8 @@ nav a.active::after {
   justify-content: space-between;
   align-items: center;
   padding: 16px 60px; /* Reduced from 24px */
-  background: #F3F0E6; /* Keep navigation bar beige */
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: transparent; /* Seamless with hero background */
+  border-bottom: 1px solid rgba(243, 238, 226, 0.1); /* Ivory border */
   font-family: 'Jost', sans-serif;
   font-size: 13px;
   letter-spacing: 2px;
@@ -294,10 +294,10 @@ nav a.active::after {
   height: 35px;
   width: auto;
   object-fit: contain;
-  mix-blend-mode: multiply;
+  /* Removed mix-blend-mode for dark backgrounds */
 }
 .hero-magazine .nav-links a {
-  color: #1a1a1a;
+  color: #F3EEE2;
   text-decoration: none;
   transition: opacity 0.3s;
 }
@@ -306,7 +306,7 @@ nav a.active::after {
   opacity: 0.7;
 }
 .hero-magazine .nav-contact {
-  color: #1a1a1a;
+  color: #F3EEE2;
   letter-spacing: 3px;
 }
 
@@ -319,12 +319,12 @@ nav a.active::after {
   font-family: 'Jost', sans-serif;
   font-size: 13px;
   letter-spacing: 2px;
-  color: #1a1a1a;
+  color: #F3EEE2; /* Ivory */
   text-transform: uppercase;
   margin-bottom: 30px;
   display: inline-block;
   font-weight: 500;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(243, 238, 226, 0.3); /* 1px ivory border */
   padding: 6px 16px;
   border-radius: 20px;
 }
@@ -332,19 +332,19 @@ nav a.active::after {
   font-family: 'Cormorant Garamond', serif;
   font-size: 72px;
   line-height: 1.1;
-  color: #1a1a1a;
+  color: #F3EEE2; /* Warm Ivory */
   font-weight: 400;
   margin-bottom: 30px;
 }
 .hero-magazine h1 em {
   font-style: italic;
-  color: #ffffff; /* White contrast on gold */
+  color: #F3EEE2; /* Not gold, to respect 'one gold moment' rule */
 }
 .hero-magazine p.sub {
   font-family: 'Jost', sans-serif;
   font-size: 17px;
   line-height: 1.8;
-  color: #1a1a1a;
+  color: #CFCFC5; /* Muted sage-gray */
   font-weight: 300;
   max-width: 550px;
 }
@@ -357,8 +357,8 @@ nav a.active::after {
   gap: 30px;
 }
 .hero-magazine .btn-dark {
-  background: #1a1a1a; /* Dark primary button */
-  color: #F3F0E6;
+  background: #C39B4D; /* Antique Gold */
+  color: #2A3A34; /* Dark green text */
   padding: 16px 32px;
   font-family: 'Jost', sans-serif;
   font-size: 13px;
@@ -366,25 +366,26 @@ nav a.active::after {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 500;
-  transition: background 0.3s ease;
+  border-radius: 2px; /* Sharp minimal corners */
+  transition: opacity 0.3s ease;
 }
 .hero-magazine .btn-dark:hover {
-  background: #333;
+  opacity: 0.9;
 }
 .hero-magazine .btn-underline {
-  color: #1a1a1a;
+  color: #F3EEE2; /* Ivory text */
   font-family: 'Jost', sans-serif;
   font-size: 13px;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-decoration: none;
   padding-bottom: 4px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  transition: border-color 0.3s ease;
+  border-bottom: 1px solid #C39B4D; /* 1px gold underline */
+  transition: opacity 0.3s ease;
   font-weight: 500;
 }
 .hero-magazine .btn-underline:hover {
-  border-color: #1a1a1a;
+  opacity: 0.7;
 }
 
 /* Floating Elements */
@@ -395,12 +396,12 @@ nav a.active::after {
   font-family: 'Cormorant Garamond', serif;
   font-size: 20px;
   font-style: italic;
-  color: #1a1a1a;
-  background: rgba(255, 255, 255, 0.3);
+  color: #F3EEE2;
+  background: rgba(243, 238, 226, 0.05); /* Very subtle ivory glass */
   padding: 12px 24px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(243, 238, 226, 0.1);
 }
 
 /* Responsive */
