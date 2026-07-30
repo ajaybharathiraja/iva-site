@@ -104,11 +104,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Initialize SideRays WebGL backgrounds
-  const sideRaysEls = document.querySelectorAll('.side-rays-container, [data-side-rays]');
-  if (sideRaysEls.length && typeof SideRays !== 'undefined') {
-    sideRaysEls.forEach(el => {
-      new SideRays(el);
+  // Initialize LightRays WebGL backgrounds
+  const lightRaysEls = document.querySelectorAll('.side-rays-container, [data-side-rays], [data-light-rays]');
+  if (lightRaysEls.length && typeof LightRays !== 'undefined') {
+    lightRaysEls.forEach(el => {
+      new LightRays(el);
     });
   }
 
