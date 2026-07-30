@@ -239,12 +239,12 @@ nav a.active::after {
 /* ---------- SPLIT RAIL HERO ---------- */
 /* ---------- MAGAZINE MASTHEAD HERO ---------- */
 .hero-magazine {
-  background: #2f443b; /* Dark theme background matching swatch */
+  background: #c09b52; /* Gold theme background matching swatch */
   min-height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
-  color: #f2ede1; /* Light text color */
+  color: #1a1a1a; /* Dark text color */
   overflow: hidden;
 }
 
@@ -256,7 +256,7 @@ nav a.active::after {
   background: url('../images/hero-bg.jpg') center/cover no-repeat;
   opacity: 0.35; /* Medium Opacity */
   z-index: 0;
-  mix-blend-mode: overlay; /* Better blending for dark themes */
+  mix-blend-mode: multiply; /* Better blending for gold */
 }
 
 .hero-magazine > * {
@@ -272,10 +272,13 @@ nav a.active::after {
   justify-content: space-between;
   align-items: center;
   padding: 16px 60px; /* Reduced from 24px */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: #F3F0E6; /* Keep navigation bar beige */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   font-family: 'Jost', sans-serif;
   font-size: 13px;
   letter-spacing: 2px;
+  position: relative;
+  z-index: 10;
 }
 .hero-magazine .nav-links {
   display: flex;
@@ -291,10 +294,10 @@ nav a.active::after {
   height: 35px;
   width: auto;
   object-fit: contain;
-  /* Removed mix-blend-mode: multiply as it does not work on dark backgrounds */
+  mix-blend-mode: multiply;
 }
 .hero-magazine .nav-links a {
-  color: #f2ede1;
+  color: #1a1a1a;
   text-decoration: none;
   transition: opacity 0.3s;
 }
@@ -303,7 +306,7 @@ nav a.active::after {
   opacity: 0.7;
 }
 .hero-magazine .nav-contact {
-  color: #f2ede1;
+  color: #1a1a1a;
   letter-spacing: 3px;
 }
 
@@ -316,29 +319,32 @@ nav a.active::after {
   font-family: 'Jost', sans-serif;
   font-size: 13px;
   letter-spacing: 2px;
-  color: #be9b4f;
+  color: #1a1a1a;
   text-transform: uppercase;
   margin-bottom: 30px;
   display: inline-block;
   font-weight: 500;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 6px 16px;
+  border-radius: 20px;
 }
 .hero-magazine h1 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 72px;
   line-height: 1.1;
-  color: #ffffff; /* Pure white for massive contrast */
+  color: #1a1a1a;
   font-weight: 400;
   margin-bottom: 30px;
 }
 .hero-magazine h1 em {
   font-style: italic;
-  color: #be9b4f;
+  color: #ffffff; /* White contrast on gold */
 }
 .hero-magazine p.sub {
   font-family: 'Jost', sans-serif;
   font-size: 17px;
   line-height: 1.8;
-  color: #f2ede1; /* Light text for dark background */
+  color: #1a1a1a;
   font-weight: 300;
   max-width: 550px;
 }
@@ -351,8 +357,8 @@ nav a.active::after {
   gap: 30px;
 }
 .hero-magazine .btn-dark {
-  background: #be9b4f; /* Gold primary button */
-  color: #1a1a1a;
+  background: #1a1a1a; /* Dark primary button */
+  color: #F3F0E6;
   padding: 16px 32px;
   font-family: 'Jost', sans-serif;
   font-size: 13px;
@@ -363,22 +369,22 @@ nav a.active::after {
   transition: background 0.3s ease;
 }
 .hero-magazine .btn-dark:hover {
-  background: #f2ede1;
+  background: #333;
 }
 .hero-magazine .btn-underline {
-  color: #f2ede1; /* Light text */
+  color: #1a1a1a;
   font-family: 'Jost', sans-serif;
   font-size: 13px;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-decoration: none;
   padding-bottom: 4px;
-  border-bottom: 1px solid rgba(242, 237, 225, 0.3); /* Light underline */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   transition: border-color 0.3s ease;
   font-weight: 500;
 }
 .hero-magazine .btn-underline:hover {
-  border-color: #f2ede1;
+  border-color: #1a1a1a;
 }
 
 /* Floating Elements */
@@ -389,12 +395,12 @@ nav a.active::after {
   font-family: 'Cormorant Garamond', serif;
   font-size: 20px;
   font-style: italic;
-  color: #f2ede1;
-  background: rgba(255, 255, 255, 0.1);
+  color: #1a1a1a;
+  background: rgba(255, 255, 255, 0.3);
   padding: 12px 24px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive */
