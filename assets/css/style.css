@@ -1407,3 +1407,19 @@ footer {
   .sig-right { grid-template-columns: 1fr; }
   .cta-card-cream { padding: 30px; }
 }
+
+/* React Bits GradientText Vanilla Equivalent */
+@keyframes animatedGradientText {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+.animated-gradient-text {
+  display: inline-block;
+  background-image: linear-gradient(to right, #40ffaa, #4079ff, #40ffaa, #4079ff, #40ffaa);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: animatedGradientText 3s linear infinite alternate;
+  font-style: normal; /* Override em default italic if desired, but retaining it looks good too */
+}
