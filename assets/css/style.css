@@ -302,6 +302,9 @@ nav a.active::after {
   align-items: center;
   flex: 1;
 }
+.hero-magazine .logo-link::after {
+  display: none !important;
+}
 .hero-magazine .nav-actions {
   display: flex;
   align-items: center;
