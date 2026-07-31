@@ -253,7 +253,7 @@ nav a.active::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('../images/hero-bg.jpg') center/cover no-repeat;
+  background: url('../images/hero-bg.png') center/cover no-repeat;
   opacity: 0.35; /* Medium Opacity */
   z-index: 0;
   mix-blend-mode: overlay; /* Best for dark green background */
