@@ -245,7 +245,6 @@ nav a.active::after {
   display: flex;
   flex-direction: column;
   color: #F3EEE2; /* Warm Ivory */
-  overflow: hidden;
 }
 
 /* Background Image Overlay */
@@ -1032,6 +1031,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 16px;
+  white-space: nowrap;
   transition: all 0.3s ease;
 }
 .hero-magazine .btn-pill-gold:hover {
@@ -1115,10 +1115,10 @@ footer {
   left: 60px;
   right: 60px;
   transform: translateY(50%);
-  background: rgba(40, 68, 62, 0.85);
+  background: rgba(30, 43, 37, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(243, 238, 226, 0.15);
+  border: 1px solid rgba(195, 155, 77, 0.3);
   box-shadow: 0 20px 40px rgba(15, 25, 20, 0.4);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1131,6 +1131,7 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  text-align: left;
   border-right: 1px solid rgba(243, 238, 226, 0.1);
 }
 .hero-stats-bar .stat-item:last-child {
@@ -1138,6 +1139,7 @@ footer {
 }
 .hero-stats-bar .stat-icon {
   color: #C39B4D;
+  flex-shrink: 0;
 }
 .hero-stats-bar .stat-text {
   font-size: 13px;
@@ -1146,10 +1148,10 @@ footer {
 }
 .hero-stats-bar .stat-text strong {
   display: block;
-  font-size: 24px;
+  font-size: 26px;
   color: #F3EEE2;
   font-weight: 400;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 /* Responsive Overrides */
