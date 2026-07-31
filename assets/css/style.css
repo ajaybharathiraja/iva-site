@@ -308,18 +308,21 @@ nav a.active::after {
   text-decoration: none;
   padding-bottom: 4px;
   position: relative;
-  transition: opacity 0.3s ease;
+  transition: color 0.3s ease, opacity 0.3s ease;
 }
 .hero-magazine .nav-links a::after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   width: 0%;
   height: 1px;
   background: #C39B4D;
   transition: width 0.3s ease;
+}
+.hero-magazine .nav-links a:hover,
+.hero-magazine .nav-links a.active {
+  color: #C39B4D;
 }
 .hero-magazine .nav-links a:hover::after,
 .hero-magazine .nav-links a.active::after {
@@ -331,20 +334,23 @@ nav a.active::after {
   gap: 20px;
 }
 .hero-magazine .nav-contact-btn {
-  color: #F3EEE2;
+  color: #C39B4D;
   text-decoration: none;
-  border: 1px solid rgba(243, 238, 226, 0.3);
+  border: 1px solid #C39B4D;
+  background: rgba(195, 155, 77, 0.12);
   padding: 10px 20px;
-  border-radius: 30px;
+  border-radius: 100px;
   letter-spacing: 2px;
   font-size: 12px;
-  transition: all 0.3s ease;
+  transition: all 0.35s ease;
   display: flex;
   align-items: center;
 }
 .hero-magazine .nav-contact-btn:hover {
-  background: #F3EEE2;
+  background: #C39B4D;
   color: #33473F;
+  box-shadow: 0 0 25px rgba(195, 155, 77, 0.5);
+  transform: translateY(-2px);
 }
 .mobile-menu-toggle {
   display: none;
