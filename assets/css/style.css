@@ -1212,7 +1212,7 @@ footer {
 }
 .sig-right {
   position: relative;
-  height: 500px;
+  height: 600px;
   perspective: 1200px;
   overflow: visible;
   /* Center the stack vertically/horizontally in the column */
@@ -1222,8 +1222,8 @@ footer {
 }
 .photo-card {
   position: absolute;
-  width: 300px;
-  height: 400px;
+  width: 380px;
+  height: 500px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(51, 71, 63, 0.15);

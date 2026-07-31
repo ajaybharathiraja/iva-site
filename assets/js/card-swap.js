@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (cards.length === 0) return;
 
   const config = {
-    cardDistance: 30, // Adjusted for typical photo sizes
-    verticalDistance: 30,
+    cardDistance: 60,
+    verticalDistance: 60,
     delay: 5000,
     skewAmount: 6,
     ease: 'elastic.out(0.6,0.9)',
