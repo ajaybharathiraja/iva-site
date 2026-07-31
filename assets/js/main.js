@@ -5,11 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Header scroll state
   const header = document.getElementById('siteHeader');
-  if (header) {
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 40);
-    });
-  }
+  const heroNav = document.querySelector('.hero-nav');
+  window.addEventListener('scroll', () => {
+    const isScrolled = window.scrollY > 40;
+    if (header) header.classList.toggle('scrolled', isScrolled);
+    if (heroNav) heroNav.classList.toggle('scrolled', isScrolled);
+  });
 
   // Mobile Menu Toggle
   const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');

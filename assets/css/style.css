@@ -285,7 +285,13 @@ nav a.active::after {
   width: 100%;
   box-sizing: border-box;
   z-index: 100;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hero-magazine .hero-nav.scrolled {
+  padding: 12px 60px;
+  background: rgba(26, 45, 41, 0.97);
+  box-shadow: 0 12px 35px rgba(15, 25, 20, 0.5);
+  border-bottom-color: rgba(191, 154, 73, 0.35);
 }
 .hero-magazine .nav-links {
   display: flex;
@@ -301,7 +307,10 @@ nav a.active::after {
   height: 35px;
   width: auto;
   object-fit: contain;
-  /* Removed mix-blend-mode for dark backgrounds */
+  transition: height 0.4s ease;
+}
+.hero-magazine .hero-nav.scrolled .nav-logo {
+  height: 28px;
 }
 .hero-magazine .nav-links a {
   color: #F3EEE2;
