@@ -20,6 +20,12 @@
 
 <!-- MAGAZINE MASTHEAD HERO SECTION -->
 <div class="hero hero-magazine">
+
+  <!-- Background Video (low opacity) -->
+  <video class="hero-bg-video" autoplay muted loop playsinline>
+    <source src="assets/videos/hero-bg.mp4" type="video/mp4">
+  </video>
+
   <nav class="hero-nav">
     <a href="index.html" class="logo-link">
       <img src="assets/images/logo.png" alt="IVA Logo" class="nav-logo">
@@ -42,37 +48,60 @@
     </div>
   </nav>
 
-  <div class="content-left">
-    <span class="tag">LUXURY VILLA ENGINEERING · COIMBATORE</span>
-    <h1>Villas drawn with precision,<br><em class="animated-gradient-text">engineered to endure.</em></h1>
-    <p class="sub">At IVA Infra, we don't just build villas.<br>We create homes that reflect your aspirations<br>and stand the test of generations.</p>
-    <div class="cta-row-new">
-      <a class="btn-pill-gold" href="projects.html">
-        EXPLORE OUR PROJECTS 
-        <span class="circle-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
-      </a>
-      <a class="btn-play" href="about.html">
-        <span class="play-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></span>
-        WATCH OUR STORY
-      </a>
-    </div>
-  </div>
+  <!-- Hero Body: Split Layout -->
+  <div class="hero-body-split">
 
-  <!-- Right Floating Features Panel -->
-  <div class="hero-features-panel">
-    <div class="feature-item">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V7l7-4 7 4v14"></path><path d="M9 21v-6h6v6"></path></svg>
-      <span>ARCHITECTURAL<br>EXCELLENCE</span>
+    <!-- LEFT: Text Content -->
+    <div class="content-left">
+      <span class="tag">LUXURY VILLA ENGINEERING · COIMBATORE</span>
+      <h1>Villas drawn with precision,<br><em class="animated-gradient-text">engineered to endure.</em></h1>
+      <p class="sub">At IVA Infra, we don't just build villas.<br>We create homes that reflect your aspirations<br>and stand the test of generations.</p>
+      <div class="cta-row-new">
+        <a class="btn-pill-gold" href="projects.html">
+          EXPLORE OUR PROJECTS 
+          <span class="circle-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+        </a>
+        <a class="btn-play" href="about.html">
+          <span class="play-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></span>
+          WATCH OUR STORY
+        </a>
+      </div>
+
+      <!-- Inline mini features (below CTAs) -->
+      <div class="hero-mini-features">
+        <div class="mini-feat">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C39B4D" stroke-width="1.5"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/></svg>
+          <span>Architectural<br>Excellence</span>
+        </div>
+        <div class="mini-feat">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C39B4D" stroke-width="1.5"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          <span>Sustainable<br>Design</span>
+        </div>
+        <div class="mini-feat">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C39B4D" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>Uncompromised<br>Quality</span>
+        </div>
+      </div>
     </div>
-    <div class="feature-item">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
-      <span>SUSTAINABLE<br>DESIGN</span>
+
+    <!-- RIGHT: Villa Video Panel -->
+    <div class="hero-image-panel">
+      <div class="hero-image-frame">
+        <video class="hero-villa-img" autoplay muted loop playsinline>
+          <source src="assets/videos/hero-bg.mp4" type="video/mp4">
+        </video>
+        <div class="hero-image-badge">
+          <span class="badge-num">50+</span>
+          <span class="badge-label">Luxury Villas<br>Delivered</span>
+        </div>
+        <div class="hero-image-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C39B4D" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Premium Build Quality
+        </div>
+      </div>
     </div>
-    <div class="feature-item">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-      <span>UNCOMPROMISED<br>QUALITY</span>
-    </div>
-  </div>
+
+  </div><!-- End .hero-body-split -->
 
   <!-- Cream Stats Bar (Overlapping) -->
   <div class="stats-band-cream">
