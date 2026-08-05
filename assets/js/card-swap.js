@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (cards.length === 0) return;
 
   const config = {
-    cardDistance: 60,
-    verticalDistance: 60,
+    cardDistance: 48,
+    verticalDistance: 32,
     delay: 5000,
-    skewAmount: 6,
+    skewAmount: 4,
     ease: 'elastic.out(0.6,0.9)',
     durDrop: 2,
     durMove: 2,

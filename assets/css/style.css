@@ -1485,13 +1485,15 @@ footer {
 /* Signature Touch Section — Signature Dark Green Theme */
 .signature-touch-section {
   background: #1A2D29 !important;
-  padding: clamp(50px, 7vh, 80px) clamp(20px, 5vw, 60px);
+  padding: clamp(100px, 12vh, 150px) clamp(20px, 5vw, 60px);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
   border-top: 1px solid rgba(195, 155, 77, 0.2);
   border-bottom: 1px solid rgba(195, 155, 77, 0.2);
+  position: relative;
+  overflow: hidden;
 }
 .sig-left h2 {
   font-family: 'Cormorant Garamond', serif;
@@ -1510,7 +1512,8 @@ footer {
 }
 .sig-right {
   position: relative;
-  height: 600px;
+  height: 540px;
+  margin-top: 50px;
   perspective: 1200px;
   overflow: visible;
   /* Center the stack vertically/horizontally in the column */
