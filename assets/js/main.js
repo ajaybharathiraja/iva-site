@@ -54,20 +54,20 @@ document.addEventListener('DOMContentLoaded', () => {
     revealEls.forEach(el => io.observe(el));
   }
 
-  // Smooth Ease-Out Count-Up Increment Animation
+  // Ultra-Smooth & Slow Count-Up Increment Animation
   function animateCounter(el) {
     const target = parseFloat(el.getAttribute('data-count') || el.dataset.count);
     if (isNaN(target)) return;
     const prefix = el.getAttribute('data-prefix') || '';
     const suffix = el.getAttribute('data-suffix') || '';
-    const duration = parseInt(el.getAttribute('data-duration'), 10) || 1600; // 1.6s duration
+    const duration = parseInt(el.getAttribute('data-duration'), 10) || 2800; // Slower 2.8s duration for luxury feel
     const startTime = performance.now();
 
     function updateCounter(currentTime) {
       const elapsedTime = currentTime - startTime;
       const progress = Math.min(elapsedTime / duration, 1);
-      // Smooth ease-out cubic curve
-      const easeProgress = 1 - Math.pow(1 - progress, 3);
+      // Quintic ease-out formula (ultra smooth deceleration)
+      const easeProgress = 1 - Math.pow(1 - progress, 4);
       const currentValue = Math.floor(easeProgress * target);
 
       el.textContent = `${prefix}${currentValue}${suffix}`;
