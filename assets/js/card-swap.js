@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let intervalRef = setInterval(swap, config.delay);
 
     const nextBtn = document.getElementById('project-swap-btn');
-    if (nextBtn && selector === '#project-card-swap') {
+    if (nextBtn) {
       nextBtn.addEventListener('click', () => {
         clearInterval(intervalRef);
         swap();
