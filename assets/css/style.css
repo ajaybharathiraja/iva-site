@@ -1347,11 +1347,12 @@ footer {
   max-width: 240px;
 }
 .glass-num {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Oswald', sans-serif !important;
   font-size: clamp(1.8rem, 2vw, 2.4rem);
   font-weight: 600;
   color: #C39B4D;
   line-height: 1;
+  letter-spacing: 0.5px;
 }
 .glass-label {
   font-family: 'Jost', sans-serif;
@@ -1410,11 +1411,13 @@ footer {
   flex-shrink: 0;
 }
 .stat-text-cream strong {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.2rem, 1.5vw, 1.7rem);
+  font-family: 'Oswald', sans-serif !important;
+  font-size: clamp(1.3rem, 1.6vw, 1.8rem);
+  font-weight: 600;
   color: #33473F;
   line-height: 1;
   margin-bottom: 2px;
+  letter-spacing: 0.5px;
 }
 .stat-text-cream span {
   font-family: 'Jost', sans-serif;
