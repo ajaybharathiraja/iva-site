@@ -762,17 +762,7 @@ section {
 }
 
 .property-price {
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
-  font-family: var(--mono);
-  font-size: 0.9rem;
-  font-weight: 600;
-  background: var(--brass);
-  color: var(--bg-dark);
-  padding: 0.4rem 0.9rem;
-  border-radius: 6px;
-  box-shadow: 0 4px 15px rgba(15, 25, 20, 0.3);
+  display: none !important;
 }
 
 .property-info {
