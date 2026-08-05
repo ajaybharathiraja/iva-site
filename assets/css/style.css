@@ -12,9 +12,10 @@
   --bg-card-hover: #3D665D;   /* Card hover — lighter green      */
   --bg-mid:        #46786D;   /* Mid-tone for subtle contrast    */
 
-  /* ── LIGHT SURFACES (Mustard/Cream) ─────────────────── */
+  /* ── LIGHT SURFACES (Warm Cream / Ivory Tone) ──────── */
   --bg-light:      #BF9A49;   /* Mustard sections bg             */
-  --paper:         #F2EFE9;   /* Warm off-white paper            */
+  --paper:         #F3EEE2;   /* Warm luxury ivory cream          */
+  --bg-cream:      #F3EEE2;   /* Exact brand warm cream tone     */
   --bg-sand-soft:  #C7AA64;   /* Softer gold highlight           */
 
   /* ── PRIMARY ACCENT (Gold) ────────────────────────────*/
@@ -1748,7 +1749,7 @@ footer {
 /* OUR PHILOSOPHY / ABOUT US SECTION (NEXT TO HERO) */
 .philosophy-section {
   padding: 100px 6vw;
-  background: #FAF8F5;
+  background: #F3EEE2 !important;
   border-bottom: 1px solid rgba(195, 155, 77, 0.2);
   position: relative;
   z-index: 5;
