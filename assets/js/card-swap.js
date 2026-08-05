@@ -114,6 +114,26 @@ document.addEventListener('DOMContentLoaded', () => {
   // Init for Signature Touch
   setupCardSwap('.sig-right', '.photo-card');
 
-  // Init for Projects Showcase
-  setupCardSwap('#project-card-swap', '.project-swap-card', { cardDistance: 45, verticalDistance: 28 });
+  // Carousel controls for Projects Track
+  const nextTrackBtn = document.getElementById('next-project-btn');
+  const prevTrackBtn = document.getElementById('prev-project-btn');
+  const track = document.getElementById('projects-track');
+
+  if (nextTrackBtn && track) {
+    nextTrackBtn.addEventListener('click', () => {
+      const cards = track.querySelectorAll('.featured-project-card');
+      if (cards.length > 1) {
+        track.appendChild(cards[0]);
+      }
+    });
+  }
+
+  if (prevTrackBtn && track) {
+    prevTrackBtn.addEventListener('click', () => {
+      const cards = track.querySelectorAll('.featured-project-card');
+      if (cards.length > 1) {
+        track.insertBefore(cards[cards.length - 1], cards[0]);
+      }
+    });
+  }
 });
