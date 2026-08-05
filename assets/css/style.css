@@ -1626,14 +1626,14 @@ footer, .footer-dark {
 /* Footer Redesign */
 .footer-dark {
   background: #2A3A34; /* Darker Green */
-  padding: 80px 60px 40px;
+  padding: 50px 60px 30px;
   color: #CFCFC5;
 }
 .footer-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 60px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 .footer-brand .footer-logo {
   height: 55px;
