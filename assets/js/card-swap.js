@@ -16,11 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
       verticalDistance: 32,
       delay: 4500,
       skewAmount: 4,
-      ease: 'elastic.out(0.6,0.9)',
-      durDrop: 1.8,
-      durMove: 1.8,
-      durReturn: 1.8,
-      promoteOverlap: 0.9,
+      ease: 'power2.out',
+      durDrop: 1.2,
+      durMove: 1.2,
+      durReturn: 1.2,
+      promoteOverlap: 0.85,
       returnDelay: 0.05
     }, customConfig);
 
@@ -46,17 +46,24 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     let order = Array.from({ length: cards.length }, (_, i) => i);
+    let isAnimating = false;
 
     cards.forEach((el, i) => {
       placeNow(el, makeSlot(i, config.cardDistance, config.verticalDistance, cards.length), config.skewAmount);
     });
 
     const swap = () => {
-      if (order.length < 2) return;
+      if (order.length < 2 || isAnimating) return;
+      isAnimating = true;
 
       const [front, ...rest] = order;
       const elFront = cards[front];
-      const tl = gsap.timeline();
+      const tl = gsap.timeline({
+        onComplete: () => {
+          order = [...rest, front];
+          isAnimating = false;
+        }
+      });
 
       tl.to(elFront, {
         y: '+=500',
@@ -76,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
           z: slot.z,
           duration: config.durMove,
           ease: config.ease
-        }, `promote+=${i * 0.15}`);
+        }, `promote+=${i * 0.1}`);
       });
 
       const backSlot = makeSlot(cards.length - 1, config.cardDistance, config.verticalDistance, cards.length);
@@ -93,17 +100,16 @@ document.addEventListener('DOMContentLoaded', () => {
         duration: config.durReturn,
         ease: config.ease
       }, 'return');
-
-      tl.call(() => {
-        order = [...rest, front];
-      });
     };
 
     let intervalRef = setInterval(swap, config.delay);
 
     const nextBtn = document.getElementById('project-swap-btn');
     if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
+      nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (isAnimating) return;
         clearInterval(intervalRef);
         swap();
         intervalRef = setInterval(swap, config.delay);
@@ -111,10 +117,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Init for Signature Touch
+  // Init for Signature Touch / Projects Showcase
   setupCardSwap('.sig-right', '.photo-card');
 
-  // Carousel controls for Projects Track
+  // Carousel controls for Projects Track below
   const nextTrackBtn = document.getElementById('next-project-btn');
   const prevTrackBtn = document.getElementById('prev-project-btn');
   const track = document.getElementById('projects-track');
