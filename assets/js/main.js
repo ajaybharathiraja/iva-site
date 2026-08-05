@@ -7,19 +7,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const header = document.getElementById('siteHeader');
   const heroNav = document.querySelector('.hero-nav');
 
+  let ticking = false;
   function checkScroll() {
     const heroEl = document.querySelector('.hero-magazine, .hero, .page-hero');
     let threshold = 80;
     if (heroEl) {
-      // Trigger as user scrolls through / crosses into the hero section
       threshold = Math.min(220, Math.max(60, heroEl.offsetHeight * 0.25));
     }
     const isScrolled = window.scrollY > threshold;
     if (header) header.classList.toggle('scrolled', isScrolled);
     if (heroNav) heroNav.classList.toggle('scrolled', isScrolled);
+    ticking = false;
   }
-  window.addEventListener('scroll', checkScroll, { passive: true });
-  window.addEventListener('resize', checkScroll, { passive: true });
+
+  function onScroll() {
+    if (!ticking) {
+      requestAnimationFrame(checkScroll);
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
   checkScroll();
 
   // Mobile Menu Toggle
