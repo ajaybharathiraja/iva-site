@@ -143,7 +143,7 @@ header {
   border-bottom: 1px solid rgba(191, 154, 73, 0.2);
   border-radius: 0px;
   transform: translateX(0);
-  transition: all 0.22s cubic-bezier(0.2, 0.9, 0.2, 1);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 header.scrolled {
@@ -323,7 +323,7 @@ nav a.active::after {
   box-sizing: border-box;
   z-index: 100;
   border-radius: 0px;
-  transition: all 0.22s cubic-bezier(0.2, 0.9, 0.2, 1);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .hero-magazine .hero-nav.scrolled {
   top: 16px;
