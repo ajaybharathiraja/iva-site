@@ -54,28 +54,46 @@ document.addEventListener('DOMContentLoaded', () => {
     revealEls.forEach(el => io.observe(el));
   }
 
-  // Count-up stats
-  const counters = document.querySelectorAll('.num[data-count]');
-  if (counters.length) {
-    const cio = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          const el = e.target;
-          const target = parseInt(el.getAttribute('data-count'), 10);
-          let cur = 0;
-          const step = Math.max(1, Math.round(target / 40));
-          const tick = () => {
-            cur += step;
-            if (cur >= target) { el.textContent = target; return; }
-            el.textContent = cur;
-            requestAnimationFrame(tick);
-          };
-          tick();
-          cio.unobserve(el);
+  // Smooth Ease-Out Count-Up Increment Animation
+  function animateCounter(el) {
+    const target = parseFloat(el.getAttribute('data-count') || el.dataset.count);
+    if (isNaN(target)) return;
+    const prefix = el.getAttribute('data-prefix') || '';
+    const suffix = el.getAttribute('data-suffix') || '';
+    const duration = parseInt(el.getAttribute('data-duration'), 10) || 1600; // 1.6s duration
+    const startTime = performance.now();
+
+    function updateCounter(currentTime) {
+      const elapsedTime = currentTime - startTime;
+      const progress = Math.min(elapsedTime / duration, 1);
+      // Smooth ease-out cubic curve
+      const easeProgress = 1 - Math.pow(1 - progress, 3);
+      const currentValue = Math.floor(easeProgress * target);
+
+      el.textContent = `${prefix}${currentValue}${suffix}`;
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCounter);
+      } else {
+        el.textContent = `${prefix}${target}${suffix}`;
+      }
+    }
+
+    requestAnimationFrame(updateCounter);
+  }
+
+  const counterElements = document.querySelectorAll('.counter, [data-count]');
+  if (counterElements.length) {
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.5 });
-    counters.forEach(c => cio.observe(c));
+    }, { threshold: 0.1 });
+
+    counterElements.forEach(el => counterObserver.observe(el));
   }
 
   // Testimonial carousel (supports multiple tracks per page)
