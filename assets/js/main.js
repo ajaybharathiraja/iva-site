@@ -60,14 +60,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (isNaN(target)) return;
     const prefix = el.getAttribute('data-prefix') || '';
     const suffix = el.getAttribute('data-suffix') || '';
-    const duration = parseInt(el.getAttribute('data-duration'), 10) || 2800; // Slower 2.8s duration for luxury feel
+    const duration = parseInt(el.getAttribute('data-duration'), 10) || 4200; // Ultra-slow 4.2s duration for extreme luxury feel
     const startTime = performance.now();
 
     function updateCounter(currentTime) {
       const elapsedTime = currentTime - startTime;
       const progress = Math.min(elapsedTime / duration, 1);
-      // Quintic ease-out formula (ultra smooth deceleration)
-      const easeProgress = 1 - Math.pow(1 - progress, 4);
+      // Quintic ease-out formula (1 - (1-t)^5) for silky smooth deceleration
+      const easeProgress = 1 - Math.pow(1 - progress, 5);
       const currentValue = Math.floor(easeProgress * target);
 
       el.textContent = `${prefix}${currentValue}${suffix}`;
