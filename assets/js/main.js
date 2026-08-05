@@ -3,15 +3,23 @@
 // =========================================================
 document.addEventListener('DOMContentLoaded', () => {
 
-  // Header scroll state
+  // Header scroll state — transforms to floating glass pill when crossing the hero section
   const header = document.getElementById('siteHeader');
   const heroNav = document.querySelector('.hero-nav');
+
   function checkScroll() {
-    const isScrolled = window.scrollY > 20;
+    const heroEl = document.querySelector('.hero-magazine, .hero, .page-hero');
+    let threshold = 80;
+    if (heroEl) {
+      // Trigger as user scrolls through / crosses into the hero section
+      threshold = Math.min(220, Math.max(60, heroEl.offsetHeight * 0.25));
+    }
+    const isScrolled = window.scrollY > threshold;
     if (header) header.classList.toggle('scrolled', isScrolled);
     if (heroNav) heroNav.classList.toggle('scrolled', isScrolled);
   }
   window.addEventListener('scroll', checkScroll, { passive: true });
+  window.addEventListener('resize', checkScroll, { passive: true });
   checkScroll();
 
   // Mobile Menu Toggle
