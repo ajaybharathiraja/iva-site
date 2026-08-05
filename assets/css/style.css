@@ -6,11 +6,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root {
-  /* ── DARK SURFACES (Forest Green) ───────────────────── */
-  --bg-dark:       #28443E;   /* Deep forest background          */
-  --bg-card:       #31524B;   /* Card surface                    */
-  --bg-card-hover: #3D665D;   /* Card hover — lighter green      */
-  --bg-mid:        #46786D;   /* Mid-tone for subtle contrast    */
+  /* ── DARK SURFACES (Signature Deep Forest Green) ────── */
+  --bg-dark:       #1A2D29;   /* Signature deep forest green tone */
+  --bg-card:       #233A35;   /* Card surface                    */
+  --bg-card-hover: #2C4842;   /* Card hover — lighter green      */
+  --bg-mid:        #35564F;   /* Mid-tone for subtle contrast    */
 
   /* ── LIGHT SURFACES (Warm Cream / Ivory Tone) ──────── */
   --bg-light:      #BF9A49;   /* Mustard sections bg             */
@@ -30,12 +30,12 @@
   --text-sub:      #82A69D;   /* Secondary — still readable        */
 
   /* ── TYPOGRAPHY ON LIGHT BACKGROUNDS ──────────────────*/
-  --ink:           #1A2D29;   /* Very dark green on mustard/cream bg */
-  --text-dark:     #28443E;   /* Headline on mustard bg              */
+  --ink:           #1A2D29;   /* Signature dark green on cream bg */
+  --text-dark:     #1A2D29;   /* Headline on light bg            */
 
   /* ── BORDERS ───────────────────────────────────────── */
   --line:          rgba(191, 154, 73, 0.32);       /* Gold border on dark */
-  --line-light:    rgba(40, 68, 62, 0.2);          /* Dark green border on mustard */
+  --line-light:    rgba(26, 45, 41, 0.2);           /* Dark green border on cream */
   --line-dark:     rgba(242, 239, 233, 0.12);      /* Subtle white on dark */
 
   --serif:  'Playfair Display', 'Fraunces', serif;
@@ -1494,7 +1494,7 @@ footer {
 .sig-left h2 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 3.5rem;
-  color: #33473F;
+  color: #1A2D29 !important;
   margin-bottom: 24px;
   line-height: 1.1;
   font-weight: 400;
@@ -1502,7 +1502,7 @@ footer {
 .sig-left p {
   font-family: 'Jost', sans-serif;
   font-size: 1.1rem;
-  color: #5A6B63; /* Darker gray for cream bg */
+  color: #28443E !important;
   line-height: 1.6;
   max-width: 480px;
 }
