@@ -238,76 +238,64 @@
   </div>
 </section>
 
-<!-- PROJECTS SHOWCASE SECTION -->
-<section id="projects" style="padding: 120px 6vw; background: #1A2D29; border-top: 1px solid rgba(195, 155, 77, 0.15);">
-  <div class="section-head reveal" style="margin-bottom: 3.5rem;">
-    <div class="eyebrow-gold">ACTIVE & UPCOMING DEVELOPMENTS</div>
-    <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 4.5vw, 3.5rem); font-weight: 400; color: #F3EEE2; margin-top: 0.5rem;">
-      Explore Luxury <em style="font-style: italic; color: #C39B4D;">Residences</em>
-    </h2>
-  </div>
-
-  <div class="property-grid reveal-stagger">
-    <!-- Property 1 -->
-    <div class="property-card" style="flex-direction: row; max-width: 100%;">
-      <div class="property-thumb" style="flex: 1; min-height: 380px;">
-        <img src="https://www.ivainfra.in/images/banner/slider/home_page_banner.jpg" alt="Imayam Villas Phase I">
-        <span class="property-badge">Gated Community</span>
-      </div>
-      <div class="property-info" style="flex: 1;">
-        <h3>Imayam Villas — Phase I</h3>
-        <div class="property-location">Kalapatti East, Coimbatore</div>
-        <div class="property-specs">
-          <span>3 & 4 BHK</span>
-          <span>2400 – 3200 Sq. Ft.</span>
-          <span>RCC Frame</span>
-        </div>
-        <p style="color: rgba(243, 238, 226, 0.7); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">
-          Situated opposite Amrita School in Kalapatti East. A gated enclave designed around wide plot layouts, three-sided natural light, and premium RCC structure.
-        </p>
-        <a href="#contact" class="btn-pill-gold" style="justify-content: center; width: 100%;">Schedule Private Site Tour →</a>
+<!-- PROJECTS SHOWCASE SECTION (STACKED CARD SWAP ANIMATION) -->
+<section id="projects" style="padding: 110px 6vw; background: #1A2D29; border-top: 1px solid rgba(195, 155, 77, 0.15); overflow: hidden;">
+  <div class="projects-container reveal">
+    <div class="projects-info-left">
+      <div class="eyebrow-gold">ACTIVE & UPCOMING DEVELOPMENTS</div>
+      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 4vw, 3.5rem); font-weight: 400; color: #F3EEE2; margin: 1rem 0 1.2rem; line-height: 1.15;">
+        Explore Luxury <em style="font-style: italic; color: #C39B4D;">Residences</em> & Villa Estates.
+      </h2>
+      <p style="color: rgba(243, 238, 226, 0.78); font-size: 1.05rem; line-height: 1.75; margin-bottom: 1.5rem; max-width: 500px;">
+        Inspect our active gated communities and bespoke independent villa projects across Coimbatore. Each project moves through disciplined engineering supervision, three-sided natural lighting, and floor-to-ceiling glass fenestration.
+      </p>
+      <div style="display: flex; gap: 1rem; align-items: center; margin-top: 2rem; flex-wrap: wrap;">
+        <a href="#contact" class="btn-pill-gold">Schedule Private Site Tour →</a>
+        <button id="project-swap-btn" style="border: 1px solid rgba(195, 155, 77, 0.4); padding: 12px 22px; font-size: 0.8rem; letter-spacing: 1.5px; color: #F3EEE2; background: rgba(255,255,255,0.06); cursor: pointer; border-radius: 100px; font-family: 'Jost', sans-serif; transition: all 0.3s ease;">
+          NEXT PROJECT ➔
+        </button>
       </div>
     </div>
 
-    <!-- Property 2 -->
-    <div class="property-card">
-      <div class="property-thumb" style="height: 260px;">
-        <img src="https://www.ivainfra.in/images/about/about-projects.png" alt="Amrita Executive Estates">
-        <span class="property-badge">Luxury Estate</span>
-      </div>
-      <div class="property-info">
-        <h3>Amrita Executive Estates</h3>
-        <div class="property-location">Veeriyampalayam, CBE</div>
-        <div class="property-specs">
-          <span>4 BHK Villa</span>
-          <span>3100 Sq. Ft.</span>
-          <span>Private Courtyard</span>
+    <div class="project-swap-right" id="project-card-swap">
+      <!-- Project Card 1 -->
+      <div class="project-swap-card">
+        <img src="assets/images/hero-bg.png" alt="Imayam Villas Phase I">
+        <div class="project-card-overlay">
+          <span class="project-card-badge">GATED COMMUNITY</span>
+          <h3>Imayam Villas — Phase I</h3>
+          <p class="project-card-loc">Kalapatti East, Coimbatore · 3 & 4 BHK (2400–3200 Sq. Ft.)</p>
         </div>
-        <p style="color: rgba(243, 238, 226, 0.7); font-size: 0.92rem; margin-bottom: 1.5rem; line-height: 1.6;">
-          Contemporary architectural design featuring double-height ceiling foyers, private landscaped gardens, and floor-to-ceiling glass fenestration.
-        </p>
-        <a href="#contact" class="btn-pill-gold" style="justify-content: center; width: 100%;">Schedule Private Site Tour →</a>
       </div>
-    </div>
 
-    <!-- Property 3 -->
-    <div class="property-card">
-      <div class="property-thumb" style="height: 260px;">
-        <img src="https://www.ivainfra.in/images/banner/slider/home_page_banner.jpg" alt="Signature Duplex Villa">
-        <span class="property-badge">Bespoke Design</span>
-      </div>
-      <div class="property-info">
-        <h3>The Signature Villa</h3>
-        <div class="property-location">Avinashi Road Corridor</div>
-        <div class="property-specs">
-          <span>4 BHK Duplex</span>
-          <span>3600 Sq. Ft.</span>
-          <span>2 Car Parking</span>
+      <!-- Project Card 2 -->
+      <div class="project-swap-card">
+        <img src="assets/images/philosophy-villa.png" alt="Amrita Executive Estates">
+        <div class="project-card-overlay">
+          <span class="project-card-badge">LUXURY ESTATE</span>
+          <h3>Amrita Executive Estates</h3>
+          <p class="project-card-loc">Veeriyampalayam, CBE · 4 BHK Villa (3100 Sq. Ft.)</p>
         </div>
-        <p style="color: rgba(243, 238, 226, 0.7); font-size: 0.92rem; margin-bottom: 1.5rem; line-height: 1.6;">
-          Custom independent luxury villa crafted to personal floor plan specifications with smart home automation and Italian marble flooring options.
-        </p>
-        <a href="#contact" class="btn-pill-gold" style="justify-content: center; width: 100%;">Schedule Private Site Tour →</a>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div class="project-swap-card">
+        <img src="assets/images/interior.png" alt="The Signature Villa">
+        <div class="project-card-overlay">
+          <span class="project-card-badge">BESPOKE DUPLEX</span>
+          <h3>The Signature Villa</h3>
+          <p class="project-card-loc">Avinashi Road Corridor · 4 BHK Duplex (3600 Sq. Ft.)</p>
+        </div>
+      </div>
+
+      <!-- Project Card 4 -->
+      <div class="project-swap-card">
+        <img src="assets/images/hero-bg.png" alt="IVA Grand Horizon">
+        <div class="project-card-overlay">
+          <span class="project-card-badge">UPCOMING ENCLAVE</span>
+          <h3>IVA Grand Horizon</h3>
+          <p class="project-card-loc">Saravanampatti, Coimbatore · 3 BHK Smart Villas</p>
+        </div>
       </div>
     </div>
   </div>
