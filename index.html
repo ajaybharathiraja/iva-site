@@ -8,18 +8,43 @@
 <link rel="icon" href="assets/images/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/BorderGlow.css">
 <link rel="stylesheet" href="assets/css/LightRays.css">
 <link rel="stylesheet" href="assets/css/StarBorder.css">
 <link rel="stylesheet" href="assets/css/ModelViewer.css">
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  .stat-floating-card {
+    background: rgba(40, 68, 62, 0.5);
+    border: 1px solid rgba(195, 155, 77, 0.3);
+    padding: 1.2rem 1.8rem;
+    border-radius: 12px;
+    text-align: center;
+    flex: 1;
+    min-width: 130px;
+  }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #C39B4D;
+  }
+  .stat-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(243, 238, 226, 0.7);
+    margin-top: 0.2rem;
+    letter-spacing: 0.5px;
+  }
+</style>
 </head>
 <body>
 
 <!-- MAGAZINE MASTHEAD HERO SECTION -->
-<div class="hero hero-magazine">
+<div class="hero hero-magazine" id="home">
 
   <!-- Background Video (low opacity) -->
   <video class="hero-bg-video" autoplay muted loop playsinline>
@@ -27,21 +52,21 @@
   </video>
 
   <nav class="hero-nav">
-    <a href="index.html" class="logo-link">
+    <a href="#home" class="logo-link">
       <img src="assets/images/logo.png" alt="IVA Logo" class="nav-logo">
     </a>
     
     <div class="nav-links">
-      <a href="index.html" class="active">HOME</a>
-      <a href="about.html">ABOUT US</a>
-      <a href="projects.html">PROPERTIES</a>
-      <a href="testimonials.html">TESTIMONIALS</a>
-      <a href="albums.html">GALLERY</a>
-      <a href="contact.html">CONTACT</a>
+      <a href="#home" class="active">HOME</a>
+      <a href="#about">ABOUT US</a>
+      <a href="#properties">PROPERTIES</a>
+      <a href="#testimonials">TESTIMONIALS</a>
+      <a href="#gallery">GALLERY</a>
+      <a href="#contact">CONTACT</a>
     </div>
     
     <div class="nav-actions">
-      <a href="contact.html" class="nav-contact-btn">BOOK A PRIVATE TOUR <span style="margin-left:8px;">→</span></a>
+      <a href="#contact" class="nav-contact-btn">BOOK A PRIVATE TOUR <span style="margin-left:8px;">→</span></a>
       <button class="mobile-menu-toggle" aria-label="Toggle Menu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
       </button>
@@ -57,11 +82,11 @@
       <h1>Villas drawn with precision,<br><em class="animated-gradient-text">engineered to endure.</em></h1>
       <p class="sub">At IVA Infra, we don't just build villas.<br>We create homes that reflect your aspirations<br>and stand the test of generations.</p>
       <div class="cta-row-new">
-        <a class="btn-pill-gold" href="projects.html">
+        <a class="btn-pill-gold" href="#properties">
           EXPLORE OUR PROJECTS 
           <span class="circle-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
         </a>
-        <a class="btn-play" href="about.html">
+        <a class="btn-play" href="#about">
           <span class="play-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></span>
           WATCH OUR STORY
         </a>
@@ -125,18 +150,304 @@
 </div> <!-- End of .hero-magazine -->
 
 <!-- SIGNATURE TOUCH SECTION -->
-<section class="signature-touch-section">
+<section class="signature-touch-section" id="signature">
   <div class="sig-left">
     <div class="eyebrow-gold">OUR SIGNATURE TOUCH</div>
     <h2>Where design meets purpose.</h2>
     <p>Every IVA Infra villa is meticulously crafted to balance aesthetic elegance with structural endurance. From the imported marble flooring to the vast, light-filled living spaces, we build homes that inspire and appreciate for generations.</p>
-    <a href="about.html" class="link-gold">LEARN MORE &rarr;</a>
+    <a href="#about" class="link-gold">LEARN MORE &rarr;</a>
   </div>
   <div class="sig-right">
     <div class="photo-card"><img src="assets/images/interior.png" alt="Living Spaces"><span class="pill-label">LIVING SPACES</span></div>
     <div class="photo-card"><img src="assets/images/interior.png" alt="Kitchen"><span class="pill-label">KITCHEN</span></div>
     <div class="photo-card"><img src="assets/images/interior.png" alt="Bedrooms"><span class="pill-label">BEDROOMS</span></div>
     <div class="photo-card"><img src="assets/images/interior.png" alt="Bathrooms"><span class="pill-label">BATHROOMS</span></div>
+  </div>
+</section>
+
+<!-- ABOUT & DISCIPLINED PROCESS SECTION -->
+<section id="about" style="padding: 120px 6vw; background: #1A2D29; border-top: 1px solid rgba(195, 155, 77, 0.15);">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 4rem; align-items: center;" class="reveal">
+    <div>
+      <div class="eyebrow-gold">OUR DISCIPLINED PROCESS</div>
+      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 400; color: #F3EEE2; margin: 1rem 0 1.5rem; line-height: 1.15;">
+        What you're shown at the start is <em style="font-style: italic; color: #C39B4D;">what you walk into at handover.</em>
+      </h2>
+      <p style="color: rgba(243, 238, 226, 0.75); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.2rem;">
+        Every villa moves through the same disciplined process — site soil analysis, structural auditing, premium material sourcing, and on-ground engineering supervision.
+      </p>
+      <p style="color: rgba(243, 238, 226, 0.75); font-size: 1.05rem; line-height: 1.7; margin-bottom: 2.2rem;">
+        By controlling every detail under one roof, we eliminate contractor hand-offs, budget creep, and project delays.
+      </p>
+
+      <div style="display: flex; gap: 1.2rem; flex-wrap: wrap;">
+        <div class="stat-floating-card">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">On-Time Handover</div>
+        </div>
+        <div class="stat-floating-card">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Years Excellence</div>
+        </div>
+        <div class="stat-floating-card">
+          <div class="stat-num">50+</div>
+          <div class="stat-label">Villas Built</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <img src="https://www.ivainfra.in/images/about/about-projects.png" alt="IVA Engineering Team" style="width: 100%; border-radius: 16px; border: 1px solid rgba(195, 155, 77, 0.3); box-shadow: 0 20px 50px rgba(0,0,0,0.4); object-fit: cover;">
+    </div>
+  </div>
+</section>
+
+<!-- PROPERTIES SHOWCASE SECTION -->
+<section id="properties" style="padding: 120px 6vw; background: #0F1914; border-top: 1px solid rgba(195, 155, 77, 0.15);">
+  <div class="section-head reveal" style="margin-bottom: 3.5rem;">
+    <div class="eyebrow-gold">ACTIVE & UPCOMING DEVELOPMENTS</div>
+    <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 4.5vw, 3.5rem); font-weight: 400; color: #F3EEE2; margin-top: 0.5rem;">
+      Explore Luxury <em style="font-style: italic; color: #C39B4D;">Residences</em>
+    </h2>
+  </div>
+
+  <div class="property-grid reveal-stagger">
+    <!-- Property 1 -->
+    <div class="property-card" style="flex-direction: row; max-width: 100%;">
+      <div class="property-thumb" style="flex: 1; min-height: 380px;">
+        <img src="https://www.ivainfra.in/images/banner/slider/home_page_banner.jpg" alt="Imayam Villas Phase I">
+        <span class="property-badge">Gated Community</span>
+        <span class="property-price">₹1.25 Cr Onwards</span>
+      </div>
+      <div class="property-info" style="flex: 1;">
+        <h3>Imayam Villas — Phase I</h3>
+        <div class="property-location">Kalapatti East, Coimbatore</div>
+        <div class="property-specs">
+          <span>3 & 4 BHK</span>
+          <span>2400 – 3200 Sq. Ft.</span>
+          <span>RCC Frame</span>
+        </div>
+        <p style="color: rgba(243, 238, 226, 0.7); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;">
+          Situated opposite Amrita School in Kalapatti East. A gated enclave designed around wide plot layouts, three-sided natural light, and premium RCC structure.
+        </p>
+        <a href="#contact" class="btn-pill-gold" style="justify-content: center; width: 100%;">Schedule Private Site Tour →</a>
+      </div>
+    </div>
+
+    <!-- Property 2 -->
+    <div class="property-card">
+      <div class="property-thumb" style="height: 260px;">
+        <img src="https://www.ivainfra.in/images/about/about-projects.png" alt="Amrita Executive Estates">
+        <span class="property-badge">Luxury Estate</span>
+        <span class="property-price">₹1.65 Cr Onwards</span>
+      </div>
+      <div class="property-info">
+        <h3>Amrita Executive Estates</h3>
+        <div class="property-location">Veeriyampalayam, CBE</div>
+        <div class="property-specs">
+          <span>4 BHK Villa</span>
+          <span>3100 Sq. Ft.</span>
+          <span>Private Courtyard</span>
+        </div>
+        <p style="color: rgba(243, 238, 226, 0.7); font-size: 0.92rem; margin-bottom: 1.5rem; line-height: 1.6;">
+          Contemporary architectural design featuring double-height ceiling foyers, private landscaped gardens, and floor-to-ceiling glass fenestration.
+        </p>
+        <a href="#contact" class="btn-pill-gold" style="justify-content: center; width: 100%;">Schedule Private Site Tour →</a>
+      </div>
+    </div>
+
+    <!-- Property 3 -->
+    <div class="property-card">
+      <div class="property-thumb" style="height: 260px;">
+        <img src="https://www.ivainfra.in/images/banner/slider/home_page_banner.jpg" alt="Signature Duplex Villa">
+        <span class="property-badge">Bespoke Design</span>
+        <span class="property-price">₹1.95 Cr Onwards</span>
+      </div>
+      <div class="property-info">
+        <h3>The Signature Villa</h3>
+        <div class="property-location">Avinashi Road Corridor</div>
+        <div class="property-specs">
+          <span>4 BHK Duplex</span>
+          <span>3600 Sq. Ft.</span>
+          <span>2 Car Parking</span>
+        </div>
+        <p style="color: rgba(243, 238, 226, 0.7); font-size: 0.92rem; margin-bottom: 1.5rem; line-height: 1.6;">
+          Custom independent luxury villa crafted to personal floor plan specifications with smart home automation and Italian marble flooring options.
+        </p>
+        <a href="#contact" class="btn-pill-gold" style="justify-content: center; width: 100%;">Schedule Private Site Tour →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3D BLUEPRINT SHOWCASE SECTION -->
+<section id="blueprint" class="floating-building-section" style="padding: 120px 6vw; background: #1A2D29; border-top: 1px solid rgba(195, 155, 77, 0.15);">
+  <div class="section-head reveal" style="text-align: center; margin: 0 auto 3.5rem;">
+    <div class="eyebrow-gold center" style="text-align: center;">3D INTERACTIVE ARCHITECTURE</div>
+    <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 4.5vw, 3.5rem); font-weight: 400; color: #F3EEE2; margin-top: 0.5rem;">
+      Inspect Villa <em style="font-style: italic; color: #C39B4D;">Structural Blueprints</em> in 3D
+    </h2>
+    <p style="color: rgba(243, 238, 226, 0.7); max-width: 620px; margin: 0.8rem auto 0; font-size: 1.05rem; line-height: 1.6;">
+      Interactive 3D model powered by <strong>ModelViewer</strong>. Drag to rotate the structure, zoom into cantilever decks, and view real-time lighting.
+    </p>
+  </div>
+
+  <div class="model-viewer-box reveal" data-model-viewer data-auto-rotate="true" data-show-screenshot-button="true" style="width: 100%; max-width: 1000px; height: 500px; margin: 0 auto; border-radius: 20px; border: 1px solid rgba(195, 155, 77, 0.3); background: radial-gradient(circle at center, rgba(40, 68, 62, 0.95) 0%, rgba(26, 45, 41, 0.98) 100%); overflow: hidden; box-shadow: 0 30px 70px rgba(0,0,0,0.5);">
+  </div>
+</section>
+
+<!-- ARCHITECTURAL GALLERY SECTION -->
+<section id="gallery" style="padding: 120px 6vw; background: #0F1914; border-top: 1px solid rgba(195, 155, 77, 0.15);">
+  <div class="section-head reveal" style="margin-bottom: 3.5rem;">
+    <div class="eyebrow-gold">ARCHITECTURAL GALLERY</div>
+    <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 4.5vw, 3.5rem); font-weight: 400; color: #F3EEE2; margin-top: 0.5rem;">
+      Crafted in detail, <em style="font-style: italic; color: #C39B4D;">captured in light.</em>
+    </h2>
+    <p style="color: rgba(243, 238, 226, 0.7); max-width: 600px; margin-top: 0.5rem; font-size: 1.05rem;">
+      Explore photography of our completed villa exteriors, structural frames, and interior fit-outs across Coimbatore.
+    </p>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;" class="reveal-stagger">
+    <div style="background: rgba(40, 68, 62, 0.3); border-radius: 16px; overflow: hidden; border: 1px solid rgba(195, 155, 77, 0.2);">
+      <img src="https://www.ivainfra.in/images/banner/slider/home_page_banner.jpg" alt="Villa Exterior" style="width: 100%; height: 260px; object-fit: cover;">
+      <div style="padding: 1.5rem;">
+        <div style="font-family: 'Jost', sans-serif; color: #C39B4D; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase;">IMAYAM VILLAS</div>
+        <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #F3EEE2; margin-top: 0.4rem; font-weight: 500;">Front Elevation & Balcony View</h4>
+      </div>
+    </div>
+
+    <div style="background: rgba(40, 68, 62, 0.3); border-radius: 16px; overflow: hidden; border: 1px solid rgba(195, 155, 77, 0.2);">
+      <img src="https://www.ivainfra.in/images/about/about-projects.png" alt="Interior Detail" style="width: 100%; height: 260px; object-fit: cover;">
+      <div style="padding: 1.5rem;">
+        <div style="font-family: 'Jost', sans-serif; color: #C39B4D; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase;">INTERIOR FIT-OUTS</div>
+        <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #F3EEE2; margin-top: 0.4rem; font-weight: 500;">Double-Height Foyer Concept</h4>
+      </div>
+    </div>
+
+    <div style="background: rgba(40, 68, 62, 0.3); border-radius: 16px; overflow: hidden; border: 1px solid rgba(195, 155, 77, 0.2);">
+      <img src="https://www.ivainfra.in/images/banner/slider/home_page_banner.jpg" alt="Gated Community Layout" style="width: 100%; height: 260px; object-fit: cover;">
+      <div style="padding: 1.5rem;">
+        <div style="font-family: 'Jost', sans-serif; color: #C39B4D; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase;">SITE DEVELOPMENT</div>
+        <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #F3EEE2; margin-top: 0.4rem; font-weight: 500;">Gated Community Internal Roads</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS SECTION -->
+<section id="testimonials" style="padding: 120px 6vw; background: #1A2D29; border-top: 1px solid rgba(195, 155, 77, 0.15);">
+  <div class="section-head reveal" style="margin-bottom: 3.5rem;">
+    <div class="eyebrow-gold">CLIENT TESTIMONIALS</div>
+    <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 4.5vw, 3.5rem); font-weight: 400; color: #F3EEE2; margin-top: 0.5rem;">
+      Trusted by homeowners <em style="font-style: italic; color: #C39B4D;">who value excellence.</em>
+    </h2>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;" class="reveal-stagger">
+    <div class="testi-card" style="max-width: none; background: rgba(15, 25, 20, 0.6); border: 1px solid rgba(195, 155, 77, 0.2); padding: 2rem; border-radius: 16px;">
+      <div class="stars" style="color: #C39B4D; font-weight: 600; font-size: 0.9rem;">Verified Client ★ 5.0</div>
+      <p style="color: rgba(243, 238, 226, 0.85); margin: 1.2rem 0; font-size: 1rem; line-height: 1.6; font-style: italic;">"The team at IVA made our dream villa a reality — professional, knowledgeable, and always transparent with costs from day one."</p>
+      <div class="testi-author" style="border-top: 1px solid rgba(195, 155, 77, 0.15); padding-top: 1rem; margin-top: 1rem;">
+        <div class="name" style="font-weight: 600; color: #F3EEE2; font-size: 1.05rem;">Dr. R. Sundaram</div>
+        <div class="role" style="font-size: 0.85rem; color: rgba(243, 238, 226, 0.6);">Villa Owner · Kalapatti East</div>
+      </div>
+    </div>
+
+    <div class="testi-card" style="max-width: none; background: rgba(15, 25, 20, 0.6); border: 1px solid rgba(195, 155, 77, 0.2); padding: 2rem; border-radius: 16px;">
+      <div class="stars" style="color: #C39B4D; font-weight: 600; font-size: 0.9rem;">Verified Client ★ 5.0</div>
+      <p style="color: rgba(243, 238, 226, 0.85); margin: 1.2rem 0; font-size: 1rem; line-height: 1.6; font-style: italic;">"Outstanding structural quality and adherence to schedule. Handed over right on budget with exceptional finishes."</p>
+      <div class="testi-author" style="border-top: 1px solid rgba(195, 155, 77, 0.15); padding-top: 1rem; margin-top: 1rem;">
+        <div class="name" style="font-weight: 600; color: #F3EEE2; font-size: 1.05rem;">K. Karthik</div>
+        <div class="role" style="font-size: 0.85rem; color: rgba(243, 238, 226, 0.6);">Imayam Villa Homeowner</div>
+      </div>
+    </div>
+
+    <div class="testi-card" style="max-width: none; background: rgba(15, 25, 20, 0.6); border: 1px solid rgba(195, 155, 77, 0.2); padding: 2rem; border-radius: 16px;">
+      <div class="stars" style="color: #C39B4D; font-weight: 600; font-size: 0.9rem;">Verified Client ★ 5.0</div>
+      <p style="color: rgba(243, 238, 226, 0.85); margin: 1.2rem 0; font-size: 1rem; line-height: 1.6; font-style: italic;">"Dedicated project manager kept us updated weekly with detailed progress pictures. Highly recommended for stress-free construction."</p>
+      <div class="testi-author" style="border-top: 1px solid rgba(195, 155, 77, 0.15); padding-top: 1rem; margin-top: 1rem;">
+        <div class="name" style="font-weight: 600; color: #F3EEE2; font-size: 1.05rem;">M. Priya & Anand</div>
+        <div class="role" style="font-size: 0.85rem; color: rgba(243, 238, 226, 0.6);">Custom Residence Owners</div>
+      </div>
+    </div>
+
+    <div class="testi-card" style="max-width: none; background: rgba(15, 25, 20, 0.6); border: 1px solid rgba(195, 155, 77, 0.2); padding: 2rem; border-radius: 16px;">
+      <div class="stars" style="color: #C39B4D; font-weight: 600; font-size: 0.9rem;">Verified Client ★ 5.0</div>
+      <p style="color: rgba(243, 238, 226, 0.85); margin: 1.2rem 0; font-size: 1rem; line-height: 1.6; font-style: italic;">"Fittings and structural materials chosen for long-term durability. We are beyond thrilled with our new home."</p>
+      <div class="testi-author" style="border-top: 1px solid rgba(195, 155, 77, 0.15); padding-top: 1rem; margin-top: 1rem;">
+        <div class="name" style="font-weight: 600; color: #F3EEE2; font-size: 1.05rem;">S. Venkatesh</div>
+        <div class="role" style="font-size: 0.85rem; color: rgba(243, 238, 226, 0.6);">Independent Villa Client</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRIVATE CONSULTATION & SITE OFFICE SECTION -->
+<section id="contact" style="padding: 120px 6vw; background: #0F1914; border-top: 1px solid rgba(195, 155, 77, 0.15);">
+  <div class="section-head reveal" style="margin-bottom: 3.5rem;">
+    <div class="eyebrow-gold">PRIVATE SITE VISIT & CONSULTATION</div>
+    <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 4.5vw, 3.5rem); font-weight: 400; color: #F3EEE2; margin-top: 0.5rem;">
+      Let's discuss your <em style="font-style: italic; color: #C39B4D;">dream residence.</em>
+    </h2>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 4rem;" class="reveal">
+    <div class="consultation-box" style="padding: 2.5rem; background: rgba(40, 68, 62, 0.4); border-radius: 20px; border: 1px solid rgba(195, 155, 77, 0.3);">
+      <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 500; margin-bottom: 1.5rem; color: #F3EEE2;">Schedule a Consultation</h3>
+      <form onsubmit="event.preventDefault(); alert('Thank you! Our engineering team will contact you shortly.');">
+        <div style="margin-bottom: 1.2rem;">
+          <label style="display: block; margin-bottom: 0.4rem; font-size: 0.85rem; color: rgba(243, 238, 226, 0.7); font-family: 'Jost', sans-serif;">Your Name</label>
+          <input type="text" placeholder="John Doe" required style="width: 100%; padding: 0.9rem 1.1rem; border-radius: 10px; border: 1px solid rgba(195, 155, 77, 0.3); background: rgba(15, 25, 20, 0.8); color: #F3EEE2; font-family: 'Jost', sans-serif; font-size: 0.95rem; outline: none;">
+        </div>
+        <div style="margin-bottom: 1.2rem;">
+          <label style="display: block; margin-bottom: 0.4rem; font-size: 0.85rem; color: rgba(243, 238, 226, 0.7); font-family: 'Jost', sans-serif;">Phone Number</label>
+          <input type="tel" placeholder="+91 98765 43210" required style="width: 100%; padding: 0.9rem 1.1rem; border-radius: 10px; border: 1px solid rgba(195, 155, 77, 0.3); background: rgba(15, 25, 20, 0.8); color: #F3EEE2; font-family: 'Jost', sans-serif; font-size: 0.95rem; outline: none;">
+        </div>
+        <div style="margin-bottom: 1.2rem;">
+          <label style="display: block; margin-bottom: 0.4rem; font-size: 0.85rem; color: rgba(243, 238, 226, 0.7); font-family: 'Jost', sans-serif;">Email Address</label>
+          <input type="email" placeholder="john@example.com" required style="width: 100%; padding: 0.9rem 1.1rem; border-radius: 10px; border: 1px solid rgba(195, 155, 77, 0.3); background: rgba(15, 25, 20, 0.8); color: #F3EEE2; font-family: 'Jost', sans-serif; font-size: 0.95rem; outline: none;">
+        </div>
+        <div style="margin-bottom: 1.2rem;">
+          <label style="display: block; margin-bottom: 0.4rem; font-size: 0.85rem; color: rgba(243, 238, 226, 0.7); font-family: 'Jost', sans-serif;">Requirement</label>
+          <select style="width: 100%; padding: 0.9rem 1.1rem; border-radius: 10px; border: 1px solid rgba(195, 155, 77, 0.3); background: #1A2D29; color: #F3EEE2; font-family: 'Jost', sans-serif; font-size: 0.95rem; outline: none;">
+            <option>Site Tour — Imayam Villas</option>
+            <option>Custom Independent Villa</option>
+            <option>Structural Engineering Query</option>
+          </select>
+        </div>
+        <div style="margin-bottom: 1.5rem;">
+          <label style="display: block; margin-bottom: 0.4rem; font-size: 0.85rem; color: rgba(243, 238, 226, 0.7); font-family: 'Jost', sans-serif;">Message / Specific Questions</label>
+          <textarea rows="3" placeholder="Tell us about your plot or preferences..." style="width: 100%; padding: 0.9rem 1.1rem; border-radius: 10px; border: 1px solid rgba(195, 155, 77, 0.3); background: rgba(15, 25, 20, 0.8); color: #F3EEE2; font-family: 'Jost', sans-serif; font-size: 0.95rem; outline: none; resize: vertical;"></textarea>
+        </div>
+        <button type="submit" class="btn-pill-gold" style="width: 100%; justify-content: center; cursor: pointer; border: none; font-size: 0.9rem; padding: 14px 28px;">SEND ENQUIRY →</button>
+      </form>
+    </div>
+
+    <div>
+      <div class="eyebrow-gold">HEADQUARTERS & SITE OFFICE</div>
+      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 400; margin-bottom: 2rem; color: #F3EEE2;">Visit our <em style="font-style: italic; color: #C39B4D;">Site Office</em></h2>
+      
+      <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+        <div style="background: rgba(40, 68, 62, 0.4); padding: 1.8rem; border-radius: 16px; border: 1px solid rgba(195, 155, 77, 0.2);">
+          <div style="font-family: 'Jost', sans-serif; color: #C39B4D; font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 0.4rem;">SITE ADDRESS</div>
+          <div style="font-size: 1.1rem; font-weight: 500; color: #F3EEE2;">IVA Imayam</div>
+          <div style="color: rgba(243, 238, 226, 0.7); font-size: 0.95rem; margin-top: 0.3rem;">Opposite Amrita School, Veeriyampalayam, Kalapatti East, Coimbatore – 641048</div>
+        </div>
+
+        <div style="background: rgba(40, 68, 62, 0.4); padding: 1.8rem; border-radius: 16px; border: 1px solid rgba(195, 155, 77, 0.2);">
+          <div style="font-family: 'Jost', sans-serif; color: #C39B4D; font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 0.4rem;">PHONE & WHATSAPP</div>
+          <div style="font-size: 1.2rem; font-weight: 600; color: #C39B4D;"><a href="tel:+919039030076" style="color: inherit; text-decoration: none;">903 903 00 76</a></div>
+          <div style="color: rgba(243, 238, 226, 0.7); font-size: 0.9rem; margin-top: 0.3rem;">Monday – Saturday: 9:00 AM – 7:00 PM</div>
+        </div>
+
+        <div style="background: rgba(40, 68, 62, 0.4); padding: 1.8rem; border-radius: 16px; border: 1px solid rgba(195, 155, 77, 0.2);">
+          <div style="font-family: 'Jost', sans-serif; color: #C39B4D; font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 0.4rem;">EMAIL INQUIRIES</div>
+          <div style="font-size: 0.95rem; color: #F3EEE2;"><a href="mailto:info@ivainfra.in" style="color: #F3EEE2; text-decoration: none;">info@ivainfra.in</a></div>
+          <div style="font-size: 0.95rem; color: #F3EEE2; margin-top: 0.3rem;"><a href="mailto:marketing@ivainfra.in" style="color: #F3EEE2; text-decoration: none;">marketing@ivainfra.in</a></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -157,7 +468,7 @@
   <div class="cta-right">
     <div class="cta-card-cream">
       <h3>Let's build your dream home together.</h3>
-      <a href="contact.html" class="link-gold">SCHEDULE A MEETING &rarr;</a>
+      <a href="#contact" class="link-gold">SCHEDULE A MEETING &rarr;</a>
     </div>
   </div>
 </section>
@@ -173,10 +484,12 @@
     <div class="footer-col">
       <h4>Navigation</h4>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="projects.html">Properties</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
 
