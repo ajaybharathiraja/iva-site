@@ -939,11 +939,9 @@ section {
 /* ---------- FOOTER ---------- */
 footer, .footer-dark {
   background: #F3EEE2 !important;
-  border-top: none !important;
-  padding: 0 6vw 2.5rem !important;
+  border-top: 1px solid rgba(195, 155, 77, 0.35) !important;
+  padding: 5rem 6vw 2.5rem !important;
   color: #1A2D29 !important;
-  position: relative;
-  overflow: hidden;
 }
 
 .footer-grid {
@@ -951,7 +949,6 @@ footer, .footer-dark {
   grid-template-columns: 2fr repeat(3, 1fr);
   gap: 3rem;
   margin-bottom: 4rem;
-  padding-top: 1rem;
 }
 
 .footer-brand p {
