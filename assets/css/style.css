@@ -938,10 +938,10 @@ section {
 
 /* ---------- FOOTER ---------- */
 footer, .footer-dark {
-  background: linear-gradient(180deg, #F1F0EB 0%, #BDAB93 48%, #77635C 100%) !important;
-  border-top: 1px solid rgba(195, 155, 77, 0.4);
+  background: #F3EEE2 !important;
+  border-top: 1px solid rgba(195, 155, 77, 0.35);
   padding: 5rem 6vw 2.5rem;
-  color: #2D231E !important;
+  color: #1A2D29 !important;
 }
 
 .footer-grid {
@@ -953,10 +953,10 @@ footer, .footer-dark {
 
 .footer-brand p {
   margin-top: 1.2rem;
-  font-size: 0.92rem;
-  color: #3E312A !important;
+  font-size: 0.95rem;
+  color: #4A5B53 !important;
   max-width: 340px;
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
 .footer-col h4 {
@@ -978,22 +978,21 @@ footer, .footer-dark {
 
 .footer-col a {
   font-size: 0.92rem;
-  color: #2D231E !important;
+  color: #1A2D29 !important;
   transition: color 0.3s ease;
   font-weight: 500;
   text-decoration: none;
 }
 
 .footer-col a:hover {
-  color: #1A2D29 !important;
-  text-decoration: underline;
+  color: #C39B4D !important;
 }
 
 .social-icons .icon-gold {
-  border: 1px solid rgba(26, 45, 41, 0.4) !important;
-  color: #1A2D29 !important;
-  background: rgba(241, 240, 235, 0.6) !important;
-  padding: 6px 12px;
+  border: 1px solid rgba(195, 155, 77, 0.4) !important;
+  color: #F3EEE2 !important;
+  background: #1A2D29 !important;
+  padding: 6px 14px;
   border-radius: 6px;
   font-weight: 600;
   font-size: 0.85rem;
@@ -1002,19 +1001,20 @@ footer, .footer-dark {
 }
 
 .social-icons .icon-gold:hover {
-  background: #1A2D29 !important;
-  color: #F3EEE2 !important;
+  background: #C39B4D !important;
+  color: #1A2D29 !important;
+  border-color: #C39B4D !important;
 }
 
 .footer-bottom {
   padding-top: 2rem;
-  border-top: 1px solid rgba(45, 35, 30, 0.2);
+  border-top: 1px solid rgba(195, 155, 77, 0.25);
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 0.85rem;
   font-family: var(--mono);
-  color: #2D231E !important;
+  color: #4A5B53 !important;
 }
 
 /* ---------- RESPONSIVE MEDIA QUERIES ---------- */
