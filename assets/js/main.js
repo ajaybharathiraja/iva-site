@@ -6,11 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Header scroll state
   const header = document.getElementById('siteHeader');
   const heroNav = document.querySelector('.hero-nav');
-  window.addEventListener('scroll', () => {
-    const isScrolled = window.scrollY > 40;
+  function checkScroll() {
+    const isScrolled = window.scrollY > 20;
     if (header) header.classList.toggle('scrolled', isScrolled);
     if (heroNav) heroNav.classList.toggle('scrolled', isScrolled);
-  });
+  }
+  window.addEventListener('scroll', checkScroll, { passive: true });
+  checkScroll();
 
   // Mobile Menu Toggle
   const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
